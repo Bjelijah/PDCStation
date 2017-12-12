@@ -11,13 +11,13 @@ import com.howell.modules.player.IPlayContract
  * Created by Administrator on 2017/12/5.
  */
 abstract class PlayBasePresenter :BasePresenter(),IPlayContract.IPresent {
-    var mView:IPlayContract.IVew?           = null
+    var mView:IPlayContract.IView?           = null
     var mContext:Context?                   = null
     var mBean:CameraItemBean?               = null
     var mAccount:String?                    = null
     val F_TIME                              = 1//刷新率  s
     override fun bindView(view: ImpBaseView) {
-        mView = view as IPlayContract.IVew
+        mView = view as IPlayContract.IView
     }
 
     override fun unbindView() {

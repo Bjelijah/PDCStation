@@ -14,5 +14,6 @@ interface IPDCContract {
     interface IPresent : ImpBasePresenter{
         fun init(c:Context)
         fun queryDevice()
+        fun querySamples(id:String,unit:String,beg:String,end:String)
     }
 }

@@ -26,7 +26,7 @@ import java.util.*
 /**
  * Created by Administrator on 2017/12/4.
  */
-open abstract class BasePlayActivity : FragmentActivity(), View.OnTouchListener,IPlayContract.IVew {
+open abstract class BasePlayActivity : FragmentActivity(), View.OnTouchListener,IPlayContract.IView {
     override fun onTouch(v: View?, event: MotionEvent?): Boolean {
         return false
     }

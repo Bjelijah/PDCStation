@@ -7,6 +7,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.howell.modules.pdc.IPDCContract
+import com.howell.modules.pdc.presenter.PDCHttpPresenter
 
 
 import com.howell.pdcstation.R
@@ -28,7 +30,8 @@ import lecho.lib.hellocharts.view.LineChartView
  * Created by Administrator on 2017/10/27.
  */
 
-class LineChartFragment : Fragment() {
+class LineChartFragment : Fragment(),IPDCContract.IView {
+
 
     private var lcHour: LineChartView?      = null
     private var lcDay: LineChartView?       = null
@@ -36,8 +39,10 @@ class LineChartFragment : Fragment() {
     private var dayData: LineChartData?     = null
     private var manHour: Array<IntArray>?   = null
     private var manDay: Array<IntArray>?    = null
+    private var mPresent:IPDCContract.IPresent? = null
     private var colorUtil = intArrayOf(Color.parseColor("#2a7ac2"), Color.parseColor("#c09237"))
     private val hourX: List<AxisValue>
+
         get() {
             val list = ArrayList<AxisValue>()
             val data = Date()
@@ -54,22 +59,41 @@ class LineChartFragment : Fragment() {
         }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val v = inflater.inflate(R.layout.fragment_line_charts, container, false)
+        val v  = inflater.inflate(R.layout.fragment_line_charts, container, false)
         lcHour = v.findViewById(R.id.lc_hour)
         lcDay  = v.findViewById(R.id.lc_day)
-
+        bindPresenter()
         initData()
         generateData()
         generateData2()
         lcHour?.isViewportCalculationEnabled = false
-        lcDay?.isViewportCalculationEnabled = false
+        lcDay?.isViewportCalculationEnabled  = false
         resetViewport(lcHour!!)
         resetViewport(lcDay!!)
         toggleCubic()
         return v
     }
 
+    override fun onDestroy() {
+        unbindPresenter()
+        super.onDestroy()
+    }
+
+    override fun bindPresenter() {
+        if (mPresent==null)mPresent = PDCHttpPresenter()
+        mPresent?.bindView(this)
+        mPresent?.init(context)
+    }
+
+    override fun unbindPresenter() {
+        mPresent?.unbindView()
+        mPresent = null
+    }
+
+
+
     private fun initData() {
+        mPresent?.queryDevice()
         if (manHour == null) manHour = Array(2) { IntArray(CHARTS_LEN) }
         for (i in 0..1) {
             for (j in 0 until CHARTS_LEN) {
@@ -85,7 +109,7 @@ class LineChartFragment : Fragment() {
 
     }
 
-    private fun generateData() {
+    private fun generateData() {//绘制每小时人流
         val lines = ArrayList<Line>()
         for (i in 0..1) {
             val values = ArrayList<PointValue>()
@@ -114,7 +138,7 @@ class LineChartFragment : Fragment() {
         lcHour!!.lineChartData = hourData
     }
 
-    private fun generateData2() {
+    private fun generateData2() { //绘制每天人流
         val lines = ArrayList<Line>()
         for (i in 0..1) {
             val values = ArrayList<PointValue>()

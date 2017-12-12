@@ -11,11 +11,11 @@ import com.howell.modules.player.IPlayContract
  * Created by Administrator on 2017/12/12.
  */
 abstract class PDCBasePresenter :BasePresenter(),IPDCContract.IPresent {
-    var mView: IPlayContract.IVew?           = null
+    var mView: IPDCContract.IView?           = null
     var mContext:Context?                    = null
     var mUrl:String?                         = null
     override fun bindView(view: ImpBaseView) {
-        mView = view as IPlayContract.IVew
+        mView = view as IPDCContract.IView
     }
 
     override fun unbindView() {

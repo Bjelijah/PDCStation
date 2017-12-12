@@ -11,7 +11,7 @@ import com.howell.modules.player.bean.VODRecord
  * Created by Administrator on 2017/12/4.
  */
 interface IPlayContract {
-    interface IVew : ImpBaseView{
+    interface IView : ImpBaseView{
         fun onError(flag:Int)
         fun onConnect(b:Boolean)
         fun onDisconnect(b:Boolean)
