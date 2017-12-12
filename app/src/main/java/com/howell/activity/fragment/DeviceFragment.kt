@@ -12,9 +12,9 @@ import android.view.ViewGroup
 import com.howell.activity.PlayViewActivity
 import com.howell.activity.view.WheelTimeDialog
 import com.howell.adapter.DeviceRecyclerViewAdapter
-import com.howell.bean.CameraItemBean
 import com.howell.modules.device.IDeviceContract
 import com.howell.modules.device.presenter.DeviceHttpPresenter
+import com.howell.modules.player.bean.CameraItemBean
 import com.howell.pdcstation.R
 import pullrefreshview.layout.BaseHeaderView
 import pullrefreshview.layout.PullRefreshLayout
@@ -48,7 +48,7 @@ class DeviceFragment : HomeBaseFragment(),IDeviceContract.IVew {
         mBhv.setOnRefreshListener { getData() }
         //mrv set adapter
         mAdapter = DeviceRecyclerViewAdapter(context,object :DeviceRecyclerViewAdapter.OnItemClickListener{
-            override fun onItemVideoClickListener(v: View, itemView: DeviceRecyclerViewAdapter.ViewHolder, pos: Int,item:CameraItemBean) {
+            override fun onItemVideoClickListener(v: View, itemView: DeviceRecyclerViewAdapter.ViewHolder, pos: Int,item: CameraItemBean) {
                 startActivity(Intent(context,PlayViewActivity::class.java)
                         .putExtra("CameraItem",item)
                         .putExtra("isPlayback",false))

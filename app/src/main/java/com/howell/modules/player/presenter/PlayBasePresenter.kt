@@ -2,20 +2,20 @@ package com.howell.modules.player.presenter
 
 import android.content.Context
 import com.howell.action.ConfigAction
-import com.howell.bean.CameraItemBean
 import com.howell.modules.BasePresenter
 import com.howell.modules.ImpBaseView
 import com.howell.modules.player.IPlayContract
+import com.howell.modules.player.bean.CameraItemBean
 
 /**
  * Created by Administrator on 2017/12/5.
  */
 abstract class PlayBasePresenter :BasePresenter(),IPlayContract.IPresent {
     var mView:IPlayContract.IView?           = null
-    var mContext:Context?                   = null
-    var mBean:CameraItemBean?               = null
-    var mAccount:String?                    = null
-    val F_TIME                              = 1//刷新率  s
+    var mContext:Context?                    = null
+    var mBean: CameraItemBean?               = null
+    var mAccount:String?                     = null
+    val F_TIME                               = 1//刷新率  s
     override fun bindView(view: ImpBaseView) {
         mView = view as IPlayContract.IView
     }

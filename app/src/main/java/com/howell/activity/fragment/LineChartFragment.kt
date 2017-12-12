@@ -32,7 +32,6 @@ import lecho.lib.hellocharts.view.LineChartView
 
 class LineChartFragment : Fragment(),IPDCContract.IView {
 
-
     private var lcHour: LineChartView?      = null
     private var lcDay: LineChartView?       = null
     private var hourData: LineChartData?    = null
@@ -42,7 +41,6 @@ class LineChartFragment : Fragment(),IPDCContract.IView {
     private var mPresent:IPDCContract.IPresent? = null
     private var colorUtil = intArrayOf(Color.parseColor("#2a7ac2"), Color.parseColor("#c09237"))
     private val hourX: List<AxisValue>
-
         get() {
             val list = ArrayList<AxisValue>()
             val data = Date()
@@ -105,8 +103,6 @@ class LineChartFragment : Fragment(),IPDCContract.IView {
             for (j in 0 until CHARTS_LEN) {
                 manDay!![i][j] = (Math.random() * 100).toInt()
             }
-
-
         }
 
     }

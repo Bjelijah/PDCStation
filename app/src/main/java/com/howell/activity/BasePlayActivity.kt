@@ -12,8 +12,8 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import com.howell.activity.view.MySeekBar
 import com.howell.activity.view.PlayFunViewPage
-import com.howell.bean.CameraItemBean
 import com.howell.modules.player.IPlayContract
+import com.howell.modules.player.bean.CameraItemBean
 import com.howell.modules.player.bean.VODRecord
 import com.howell.modules.player.presenter.PlayTurnPresenter
 import com.howell.pdcstation.R
@@ -54,7 +54,7 @@ open abstract class BasePlayActivity : FragmentActivity(), View.OnTouchListener,
     lateinit var mPopupWindow:PopupWindow
     lateinit var mHD:LinearLayout
     lateinit var mSD:LinearLayout
-    internal lateinit var mCam:CameraItemBean
+    internal lateinit var mCam: CameraItemBean
     internal var mPresent:IPlayContract.IPresent?=null
     internal var isShowSurfaceIcon = false
     var mIsSub = true

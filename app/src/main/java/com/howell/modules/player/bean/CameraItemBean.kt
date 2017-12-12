@@ -1,4 +1,4 @@
-package com.howell.bean
+package com.howell.modules.player.bean
 
 import java.io.Serializable
 

@@ -18,7 +18,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.howell.activity.PlayViewActivity
 import com.howell.activity.fragment.WheelTimeFragment
-import com.howell.bean.CameraItemBean
+import com.howell.modules.player.bean.CameraItemBean
 import com.howell.pdcstation.R
 import com.howellsdk.utils.Util
 
@@ -31,7 +31,7 @@ class WheelTimeDialog() : DialogFragment() {
     lateinit var mEndWheel : WheelTimeFragment
     lateinit var mTvBeg : TextView
     lateinit var mTvEnd : TextView
-    lateinit var mCam:CameraItemBean
+    lateinit var mCam: CameraItemBean
 
     @SuppressLint("ValidFragment")
     constructor(item:CameraItemBean):this(){

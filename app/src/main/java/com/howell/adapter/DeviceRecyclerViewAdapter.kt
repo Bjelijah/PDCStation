@@ -13,7 +13,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.howell.activity.view.SwipeLinearLayout
-import com.howell.bean.CameraItemBean
+import com.howell.modules.player.bean.CameraItemBean
 import com.howell.pdcstation.R
 import com.howell.utils.PhoneConfig
 import com.howell.utils.ScaleImageUtils

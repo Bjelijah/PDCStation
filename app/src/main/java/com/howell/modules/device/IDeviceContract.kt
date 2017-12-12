@@ -1,9 +1,9 @@
 package com.howell.modules.device
 
 import android.content.Context
-import com.howell.bean.CameraItemBean
 import com.howell.modules.ImpBasePresenter
 import com.howell.modules.ImpBaseView
+import com.howell.modules.player.bean.CameraItemBean
 
 /**
  * Created by Administrator on 2017/11/30.

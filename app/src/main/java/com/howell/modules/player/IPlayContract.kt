@@ -1,9 +1,9 @@
 package com.howell.modules.player
 
 import android.content.Context
-import com.howell.bean.CameraItemBean
 import com.howell.modules.ImpBasePresenter
 import com.howell.modules.ImpBaseView
+import com.howell.modules.player.bean.CameraItemBean
 import com.howell.modules.player.bean.PTZ
 import com.howell.modules.player.bean.VODRecord
 
@@ -20,7 +20,7 @@ interface IPlayContract {
         fun onPlaybackStartEndTime(beg:Long,end:Long)
     }
     interface IPresent : ImpBasePresenter{
-        fun init(c: Context,bean:CameraItemBean)
+        fun init(c: Context,bean: CameraItemBean)
         fun deInit()
         fun play(isSub:Boolean)
         fun playback(isSub:Boolean,beg:String,end:String)

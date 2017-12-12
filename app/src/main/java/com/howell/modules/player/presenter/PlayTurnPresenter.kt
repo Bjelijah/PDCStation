@@ -3,7 +3,7 @@ package com.howell.modules.player.presenter
 import android.content.Context
 import android.util.Log
 import com.howell.action.ConfigAction
-import com.howell.bean.CameraItemBean
+import com.howell.modules.player.bean.CameraItemBean
 import com.howell.modules.player.bean.PTZ
 import com.howell.modules.player.bean.VODRecord
 import com.howellsdk.api.ApiManager

@@ -1,8 +1,7 @@
 package com.howell.modules.device.presenter
 
-import android.util.Log
 import com.howell.action.ConfigAction
-import com.howell.bean.CameraItemBean
+import com.howell.modules.player.bean.CameraItemBean
 import com.howellsdk.api.ApiManager
 import com.howellsdk.net.http.utils.Util
 import io.reactivex.Observable

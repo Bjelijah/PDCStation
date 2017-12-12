@@ -7,40 +7,62 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class PDCThreshold {
-    @SerializedName("Max")      Integer max;
-    @SerializedName("Min")      Integer min;
+    @SerializedName("Enabled")              Boolean enable;
+    @SerializedName("DeviationNumber")      Threshold deviationNumber;
+    @SerializedName("LastNLeaveNumber")     Threshold lastNLeaveNumber;
+    @SerializedName("LastNEnterNumber")     Threshold lastNEnterNumber;
 
     @Override
     public String toString() {
         return "PDCThreshold{" +
-                "max=" + max +
-                ", min=" + min +
+                "max=" + enable +
+                ", deviationNumber=" + deviationNumber +
+                ", lastNLeaveNumber=" + lastNLeaveNumber +
+                ", lastNEnterNumber=" + lastNEnterNumber +
                 '}';
     }
 
-    public Integer getMax() {
-        return max;
+    public Boolean getEnable() {
+        return enable;
     }
 
-    public void setMax(Integer max) {
-        this.max = max;
+    public void setEnable(Boolean enable) {
+        this.enable = enable;
     }
 
-    public Integer getMin() {
-        return min;
+    public Threshold getDeviationNumber() {
+        return deviationNumber;
     }
 
-    public void setMin(Integer min) {
-        this.min = min;
+    public void setDeviationNumber(Threshold deviationNumber) {
+        this.deviationNumber = deviationNumber;
+    }
+
+    public Threshold getLastNLeaveNumber() {
+        return lastNLeaveNumber;
+    }
+
+    public void setLastNLeaveNumber(Threshold lastNLeaveNumber) {
+        this.lastNLeaveNumber = lastNLeaveNumber;
+    }
+
+    public Threshold getLastNEnterNumber() {
+        return lastNEnterNumber;
+    }
+
+    public void setLastNEnterNumber(Threshold lastNEnterNumber) {
+        this.lastNEnterNumber = lastNEnterNumber;
     }
 
     public PDCThreshold() {
 
     }
 
-    public PDCThreshold(Integer max, Integer min) {
+    public PDCThreshold(Boolean enable, Threshold deviationNumber, Threshold lastNLeaveNumber, Threshold lastNEnterNumber) {
 
-        this.max = max;
-        this.min = min;
+        this.enable = enable;
+        this.deviationNumber = deviationNumber;
+        this.lastNLeaveNumber = lastNLeaveNumber;
+        this.lastNEnterNumber = lastNEnterNumber;
     }
 }
