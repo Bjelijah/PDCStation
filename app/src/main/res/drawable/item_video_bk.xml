@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/item_camera_detele_bk">
+    <item>
+        <selector>
+            <!--@android:color/background_dark-->
+            <item android:drawable="@color/home_bk" />
+        </selector>
+    </item>
+</ripple>
+
+

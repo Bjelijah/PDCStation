@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="1dp"
+    android:layout_marginTop="15dp"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!--style="?android:attr/buttonBarButtonStyle"-->
+    <!--android:background="@drawable/item_btn_bk"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/item_camera_bk"
+        android:orientation="horizontal"
+        android:background="@color/home_bk"
+        >
+        <!--android:background="@drawable/item_camera_btn"-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            >
+            <!-- 录像 -->
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/item_camera_iv_replay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:fabSize="mini"
+                app:backgroundTint="@color/item_camera_replay"
+                app:rippleColor="#ff0000"
+                app:elevation="6dp"
+                app:pressedTranslationZ="12dp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            >
+            <!-- 设置 -->
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/item_camera_iv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:fabSize="mini"
+                app:backgroundTint="@color/item_camera_setting"
+                app:rippleColor="#ff0000"
+                app:elevation="6dp"
+                app:pressedTranslationZ="12dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            >
+            <!-- 属性 -->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="16sp"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:text="属性"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--/>-->
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/item_camera_iv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:fabSize="mini"
+                app:backgroundTint="@color/item_camera_info"
+                app:rippleColor="#00ff00"
+                app:elevation="6dp"
+                app:pressedTranslationZ="12dp"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_camera_ll_delete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="false"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="35dp"
+
+            >
+            <!-- 删除 -->
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/item_camera_iv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:fabSize="mini"
+                app:backgroundTint="@color/item_camera_detele"
+                app:rippleColor="#00ff00"
+                app:elevation="6dp"
+                app:pressedTranslationZ="12dp"
+                />
+
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+    <com.howell.activity.view.SwipeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_camera_sll">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_camera_top"
+            android:background="@color/transparent"
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/home_bk"
+                    />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ImageView
+                        android:id="@+id/item_camera_iv_picture"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical"
+                    android:background="@color/home_bk"
+                    >
+
+                    <TextView
+                        android:id="@+id/item_camera_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:gravity="center|bottom"
+                        android:layout_weight="1.0"
+                        />
+
+                    <TextView
+                        android:id="@+id/item_camera_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/md_grey_400"
+                        android:textSize="10sp"
+                        android:gravity="left|bottom"
+                        android:text="test"
+                        android:visibility="gone"
+                        android:layout_weight="1.0"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="@string/camera_list_wifi_intensity"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/item_camera_iv_wifi_idensity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/item_camera_iv_offline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top" />
+
+        </FrameLayout>
+
+    </com.howell.activity.view.SwipeLinearLayout>
+
+</FrameLayout>

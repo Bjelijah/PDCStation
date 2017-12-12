@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PDC Station</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="username">Account:</string>
+    <string name="password">Password:</string>
+    <string name="remember_password">Remember password</string>
+    <string name="message">Please link network first</string>
+    <string name="ok">OK</string>
+    <string name="all">ALL</string>
+    <string name="verification">Account and password cannot be empty</string>
+    <string name="password_error">Password error</string>
+    <string name="account_error">Account does not exist</string>
+    <string name="online">online</string>
+    <string name="not_online">offline</string>
+    <string name="auto_login">Automatic login</string>
+    <string name="login">Login</string>
+    <string name="login_fail">Login fail</string>
+    <string name="please_wait">Please wait</string>
+    <string name="loading">loading</string>
+    <string name="not_online_message">Device offline,can not open</string>
+    <string name="save_set">Saving settings</string>
+    <string name="camera_list">Camera List</string>
+    <string name="settings">Settings</string>
+    <string name="information">Information</string>
+    <string name="account">My account</string>
+    <string name="sys_message">System message</string>
+    <string name="alarm">Alarm</string>
+    <string name="about">About eCamera V1.1.9</string>
+    <string name="exit">Log Out</string>
+    <string name="email">Email</string>
+    <string name="mobiletel">Mobile phone number</string>
+    <string name="account_name">Account</string>
+    <string name="password_change">Modify password</string>
+    <string name="phone_change">Modify cell phone number</string>
+    <string name="name">UserName</string>
+    <string name="cancel">Cancel</string>
+    <string name="device_manager_title">Select Camera</string>
+    <string name="device_name">Device name</string>
+    <string name="device_id">device id</string>
+    <string name="vedio_arg">Video image parameters</string>
+    <string name="resolution">Resolution</string>
+    <string name="picture">Image quality</string>
+    <string name="alarm_messages">Motion Detect settings</string>
+    <string name="move_detect">Video motion detection</string>
+    <string name="push_set">Alarm Notify Setting</string>
+    <string name="push_push">Alarm Notify</string>
+    <string name="video_list">Video List</string>
+    <string name="update">Update</string>
+    <string name="save_picture">saved to /eCamera</string>
+    <string name="link_timeout">Connection timeout, please reconnect the video</string>
+    <string name="link_error">Connection error, please reconnect the video</string>
+    <string name="login_error">Connection error,please log in again</string>
+    <string name="video_over_turn">Rollover</string>
+    <string name="turn_over">Rollover Image</string>
+    <string name="load_setting">Settings information is being read</string>
+    <string name="load_videolist">Playback list is being read</string>
+    <string name="pull_to_refresh">pull to refresh</string>
+    <string name="release_to_refresh">Release to refresh</string>
+    <string name="refreshing">Refreshing</string>
+    <string name="last_update">Last update</string>
+    <string name="select_date">Select Date</string>
+    <string name="load_data">Now loading</string>
+    <string name="camera_version_title">Camera update</string>
+    <string name="camera_new_version">Find new version</string>
+    <string name="camera_old_version1">Version</string>
+    <string name="camera_old_version2"> no new version</string>
+    <string name="client_new_version">Find new client version</string>
+    <string name="camera_update">Update</string>
+    <string name="camera_update_notice">Make sure camera is online ,make sure camera power supply and connected to the network</string>
+    <string name="auxiliary_set">Auxiliary Settings</string>
+    <string name="power_land">Power Light</string>
+    <string name="vmd_info">If something moving in the video,it will trigger the alarm,send alarm push and record it(if has SDcard)</string>
+    <string name="gain_set">Getting Settings</string>
+    <string name="update_dialog_title">Client Update</string>
+    <string name="update_dialog_message">New version, please update in time</string>
+    <string name="download_dialog_message">Downloading</string>
+    <string name="download_dialog_fail">Download fail</string>
+    <string name="load_more">More</string>
+    <string name="no_sdcard">Please insert the SD card</string>
+    <string name="local_files">LocalFiles</string>
+    <string name="no_estore">No SDCard in Camera</string>
+    <string name="share_pic">Share picture</string>
+    <string name="set_fail">Bad Network Signal, set fail</string>
+    <string name="get_settings_fail">Get settings fail</string>
+    <string name="modify_phone_num_hint">Bind new phone number</string>
+    <string name="original_password">Original Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password:</string>
+    <string name="modify_password_tips"></string>
+    <string name="wifi_intensity">Device Wifi Intensity</string>
+    <string name="set_new_password">Setting new password now</string>
+    <string name="set_new_phone_num">Setting new cell phone number now</string>
+    <string name="more">More</string>
+    <string name="media_lib">Media</string>
+    <string name="notice">Notice</string>
+
+    <string name="share">Share</string>
+    <string name="share_device_succeess">Succeess</string>
+    <string name="share_device_fail_already_succeed">Fail,this account has been shared before</string>
+    <string name="share_device_fail_account_not_exist">Fail,account not exist</string>
+    <string name="share_device_fail">fail</string>
+    <string name="add_sharer_account_et_hint_text">Input the account you want to share</string>
+    <string name="camera_list_sharer_tip">-share</string>
+
+    <string name="device_set_share_device">Share device</string>
+    <string name="device_set_remove_device">Remove device</string>
+    <string name="device_set_sharer_no_property">No operation permissions</string>
+    <string name="turn_over_0">Image flip - 0°</string>
+    <string name="turn_over_180">Image flip - 180°</string>
+    <string name="power_land_on">Power light - on</string>
+    <string name="power_land_off">Power light - off</string>
+
+    <string name="device_share_to_other_add_sharer_account">Add account</string>
+    <string name="device_share_to_other_tips">Added account</string>
+    <string name="flash_lighting_tips">Please aim mobile phone flash to the camera</string>
+    <string name="flash_lighting_btn_tips">Flash</string>
+
+    <string name="camera_list_wifi_intensity">Signal:</string>
+    <string name="set_device_wifi_device_name">Camera name:</string>
+
+    <string name="login_or_register_activity_slogan">I feel safe with you</string>
+    <string name="login_or_register_activity_register">Register</string>
+    <string name="login_or_register_activity_login">Log In</string>
+    <string name="login_or_register_activity_try">Try eCam</string>
+
+    <string name="big_image_activity_dialog_title_remove">Delete</string>
+    <string name="big_image_activity_dialog_message">Delete this image?</string>
+    <string name="big_image_activity_dialog_yes_button_name">Yes</string>
+    <string name="big_image_activity_dialog_no_button_name">No</string>
+
+    <string name="modify_password_activity_fail_toast">Entered passwords differ,please input again</string>
+    <string name="modify_password_activity_success_toast">Success</string>
+    <string name="modify_password_activity_passwordformat_fail">Password error ,please input again</string>
+    <string name="modify_password_activity_authencation_fail">Password error ,please input again</string>
+
+    <string name="modify_cellphonenum_activity_fail_toast">Set fail</string>
+    <string name="modify_cellphonenum_activity_success_toast">Sussess</string>
+
+    <string name="change_devicename_activity_add_success_tip">Success! A name for camera</string>
+    <string name="change_devicename_activity_success">Succeess</string>
+    <string name="change_devicename_activity_fail">Fail</string>
+
+    <string name="remove_device_popmenu_yes">Yes</string>
+    <string name="remove_device_popmenu_no">No</string>
+    <string name="remove_device_popmenu_logout">Yes</string>
+
+    <string name="device_sharer_item_remove">Delete</string>
+
+    <string name="loacl_file_activity_no_iamge_bg">No File</string>
+
+    <string name="register_activity_username">Username: 6 to 32 characters</string>
+    <string name="register_activity_email">Email</string>
+    <string name="register_activity_password">Password: 6 to 20 characters,letters or numbers,case sensitive</string>
+    <string name="register_activity_password_confirm">Confirm Password</string>
+    <string name="register_activity_show_password">Show Password</string>
+    <string name="register_activity_tips">Click to register,you agree to our Terms of registration</string>
+    <string name="register_activity_success">Register Success</string>
+    <string name="register_activity_fail_account_exist">Register Fail, Account Exist</string>
+    <string name="register_activity_fail_email_exist">Register Fail, Email Exist</string>
+    <string name="register_activity_fail">Register Fail</string>
+    <string name="register_activity_account_password_empty">Account and password cannot be empty</string>
+    <string name="register_activity_password_differ">Entered passwords differ</string>
+    <string name="register_activity_fail_account_format">Fail, Account contans illegal character</string>
+
+    <string name="flash_activity_turn_red_btn_name">Click when the light turn red </string>
+    <string name="flash_activity_turn_red_tip">Has the power light turned red?</string>
+
+    <string name="send_wifi_config_activity_tip">Put the speaker close to the camera microphone</string>
+    <string name="send_wifi_config_activity_dialog_title">Network unstable</string>
+    <string name="send_wifi_config_activity_dialog_message">Please try again later</string>
+    <string name="send_wifi_config_activity_dialog_yes_btn">Sure</string>
+    <string name="send_wifi_config_activity_tip_sending">Sending command&#8230;</string>
+    <string name="send_wifi_config_activity_tip_finish">Finish</string>
+    <string name="send_wifi_config_activity_btn_send">Send</string>
+    <string name="send_wifi_config_activity_btn_send_finish">Click when the light turn green</string>
+    <string name="send_wifi_config_activity_final_tips">Success if power light turn green! Or try again</string>
+
+    <string name="set_wifi_activity_device_name">Camera Name:</string>
+    <string name="set_wifi_activity_input_device_name">Input Camera Name</string>
+    <string name="set_wifi_activity_wifi_name">Wifi SSID:</string>
+    <string name="set_wifi_activity_wifi_password">Wifi Password:</string>
+    <string name="set_wifi_activity_input_wifi_password">Input Wifi Password</string>
+
+    <string name="match_activity_tips">Camera is reading configuration,please wait&#8230;</string>
+    <string name="match_activity_fail_tips">Fail</string>
+    <string name="match_activity_fail_dialog_title">Fail</string>
+    <string name="match_activity_fail_dialog_message">Network unstable,please try again</string>
+    <string name="match_activity_fail_dialog_yes_btn">Sure</string>
+    <string name="match_activity_success_dialog_title">Success</string>
+    <string name="match_activity_success_dialog_message">Camera added successfully</string>
+    <string name="match_activity_success_dialog_yes_btn">Sure</string>
+
+    <string name="navigation_activity_btn">Go</string>
+
+    <string name="title_popup_listen">Listen</string>
+    <string name="title_popup_scan">Scan</string>
+    <string name="popup_window_hd">HD</string>
+    <string name="popup_window_sd">SD</string>
+
+    <string name="invalid_code">Illegal qr code</string>
+
+    <string name="QR_code">QR code</string>
+    <string name="msg_default_status">put the qr code in the box, can automatically scan</string>
+
+    <style name="MyCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/cb_select</item>
+    </style>
+
+
+    <string name="play_talk">talk</string>
+    <string name="device_set_no_permission">no permission</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- -->
+    <string name="login_use_custom">Custom Server?</string>
+    <string name="login_server_select">Server:</string>
+    <string name="login_server">www.haoweis.com:8800</string>
+    <string name="login_not_user">Not a member of eCam?</string>
+    <string name="login_register">register</string>
+    <string name="login_test_user">Skip for now</string>
+    <string name="login_try">You will login eCam with trial account which has been configured the default camera</string>
+    <string name="login_other">OR</string>
+    <string name="login_other_fingerprint">Login</string>
+    <string name="login_other_fingerprint_no_support">fingerprint not support!</string>
+
+    <string name="register">Register</string>
+    <string name="reg_if_bind_finger">Bind fingerprint?</string>
+    <string name="reg_bind_finger">then we can sign in with fingerprint!Of course you can do it later</string>
+    <string name="reg_finger_support_error">fingerprint is not accessible</string>
+    <string name="reg_field_empty">This field is required</string>
+    <string name="reg_usename_not_valid">The length of username should be 6-32</string>
+    <string name="reg_email_not_valid">This email address is invalid</string>
+
+    <string name="save_db">bind user infomation with finger</string>
+    <string name="save_db_ok">bind OK!</string>
+    <string name="save_db_error">bind error!</string>
+    <string name="save_db_no_support">bind not support!</string>
+    <string name="finger_title">FingerPrint</string>
+    <string name="finger_cancel">Cancel</string>
+    <string name="finger_login_with_password">use password</string>
+    <string name="fingerprint_description">Confirm fingerprint to continue</string>
+    <string name="fingerprint_hint">Touch sensor</string>
+    <string name="fingerprint_failed">Authentication Failed try it again</string>
+    <string name="fingerprint_error">Authentication ERROR plz wait and try again</string>
+    <string name="fingerprint_ok">Verification Successful!!  login..</string>
+    <string name="fingerprint_save_ok">Verification Successful!!  save..</string>
+    <string name="fingerprint_sign_error">sign in fail! plz use password to sign in</string>
+    <string name="fingerprint_no_support">Not Support Fingerprint</string>
+
+
+    <string name="phone_info_send_title">register this Phone</string>
+    <string name="phone_info_send_description">phone info has not be registered</string>
+    <string name="phone_info_sending">registering..</string>
+    <string name="phone_info_send_ok">register success</string>
+    <string name="phone_info_send_fail">register failed&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;plz wait and try again</string>
+    <string name="phone_info_send_again">send again</string>
+    <string name="phone_info_not_authenticated">Device not be authenticated</string>
+
+    <string name="finger_save_title">Finger Save</string>
+    <string name="fingerprint_save_description">Save FingerPrint and Account Information</string>
+
+
+
+    <!-- home -->
+
+    <string name="home_guest">Guest</string>
+    <string name="home_guest_email">using guest mode</string>
+    <string name="home_drawer_item_uid">UID</string>
+    <string name="home_drawer_logout">Exit</string>
+
+    <string name="home_drawer_item_home">Home</string>
+    <string name="home_drawer_item_center">Center</string>
+    <string name="home_drawer_second_head">More Setting</string>
+    <string name="home_drawer_connect">Communication Mode</string>
+    <string name="home_drawer_turn_server">Turn Server</string>
+    <string name="home_drawer_encrypt">encrypt</string>
+    <string name="home_drawer_server_address">Server Address</string>
+    <string name="home_drawer_push_service">Push Service</string>
+    <string name="home_drawer_turn_address">Turn Setting</string>
+    <string name="home_drawer_server_bind">Bind My Account</string>
+    <string name="home_fragment_devices">DeviceList</string>
+    <string name="home_fragment_medias">Media</string>
+    <string name="home_fragment_notice">Notice</string>
+    <string name="home_fragment_pdc">PDC</string>
+    <string name="home_drawer_changer_user_error">Changer user error</string>
+
+    <string name="home_setting_set">Setting</string>
+    <string name="home_setting_help">Help</string>
+    <string name="home_setting_like">Like</string>
+    <string name="home_setting_share">Share</string>
+    <string name="home_setting_search">Search</string>
+    <string name="home_setting_scope">Scope</string>
+    <string name="home_setting_unread">Unread</string>
+    <string name="home_setting_read">Read</string>
+    <string name="home_setting_read_all">All</string>
+    <string name="home_setting_show_chart">Chart</string>
+    <!-- add -->
+    <string name="add_camera_title">Add New Camera</string>
+    <string name="add_ap">Add Ap</string>
+    <string name="add_scan">Scan</string>
+    <string name="add_normal">Add camera</string>
+    <string name="add_flash">Scanning</string>
+    <string name="add_listen">Listening</string>
+    <string name="add_fail">Add Camera Failed!!!</string>
+    <string name="add_listen_subtitle">Name Device And Set WIFI</string>
+    <string name="add_listen_no_ssid">Please select wifi</string>
+    <string name="add_listen_no_name">Please style your new camera</string>
+    <string name="add_listen_no_pwd">Please input wifi password</string>
+    <string name="add_listen_open_location">Open Location</string>
+    <string name="add_listen_device_name_title">Name：</string>
+    <string name="add_listen_device_name">Style Your New Camera</string>
+    <string name="add_listen_device_password_title">Wifi Password:</string>
+    <string name="add_listen_device_password">Input Your WIFI Password</string>
+    <string name="add_listen_device_wifi_title">Select Your Wifi:</string>
+    <string name="add_listen_device_wifi_tip">No Wifi found? \nNeed Open Your GPS</string>
+    <string name="add_listen_device_next">NEXT</string>
+    <string name="add_listen_device_tb_title">Listen</string>
+    <string name="add_listen_device_error_wifi">Please select your WIFI</string>
+
+    <string name="add_ap_ip_title">IP:</string>
+    <string name="add_ap_ip">Input IP Address Of Your Camera</string>
+    <string name="add_ap_port_title">Port:</string>
+    <string name="add_ap_port">Input Port Of Your Camera</string>
+    <string name="add_ap_btn">Add</string>
+    <string name="add_ap_ip_error">This field need ip</string>
+    <string name="add_ap_port_error">This field need integer</string>
+    <string name="add_ap_dialog_title">Add AP Camera</string>
+
+
+    <string name="drawer_item_home">Home</string>
+    <string name="drawer_item_free_play">Free Play</string>
+    <string name="drawer_item_custom">Custom</string>
+    <string name="drawer_item_section_header">Section Header</string>
+    <string name="drawer_item_settings">Settings</string>
+    <string name="drawer_item_help">Help</string>
+    <string name="drawer_item_open_source">Open Source</string>
+    <string name="drawer_item_contact">Contact</string>
+
+    <string name="notice_no_more">No more Notice</string>
+    <string name="device_item_remove_title">Remove Device</string>
+    <string name="device_item_remove_msg">Sure To Remove It?</string>
+    <string name="device_item_remove_fail">Fail To Remove Camera</string>
+
+    <string name="server_setting_title">Server Setting</string>
+    <string name="server_setting_ip_title">ServerIP OR Address:</string>
+    <string name="server_setting_ip">Input Server IP OR Address</string>
+    <string name="server_setting_port_title">ServerPort:</string>
+    <string name="server_setting_port">Input Server Port</string>
+    <string name="server_setting_ssl">Server Using SSL</string>
+    <string name="server_setting_service_type">Server Link Type</string>
+    <string name="server_setting_video_port_title">Video Port:</string>
+    <string name="server_setting_video_port">Input Video Port</string>
+    <string name="server_setting_default">Default</string>
+    <string name="server_setting_btn">Save</string>
+
+    <string name="camera_settting_title">Camera Setting</string>
+    <string name="camera_setting_title_name">Camera Name</string>
+    <string name="camera_setting_name_change">Rename</string>
+    <string name="camera_setting_rename_title">Rename</string>
+    <string name="camera_setting_rename_input">Input Your Camera New Name</string>
+    <string name="camera_setting_param">Parameters</string>
+    <string name="camera_setting_resolution_dec">The resolutiong of the video</string>
+    <string name="camera_setting_picture_dec">The Image quality which be taken </string>
+    <string name="camera_setting_assist">Assist</string>
+    <string name="camera_setting_lamp">Lamp</string>
+    <string name="camera_setting_detection">Detection</string>
+    <string name="camera_setting_det_rec">Detection and Recording</string>
+    <string name="camera_setting_det_rec_dec">If something moving in the video,it will trigger the alarm,record it(if has SDcard)</string>
+    <string name="camera_setting_det_alarm">Detection and Push Alarm</string>
+    <string name="camera_setting_det_alarm_dec">Push the Alarm To My Phone</string>
+    <string name="camera_setting_camera_version">Version</string>
+    <string name="camera_setting_camera_updata">Updata Camera</string>
+    <string name="camera_setting_share">@string/share</string>
+    <string name="camera_setting_share_device">Share Camera</string>
+    <string name="camera_setting_share_device_dec">Share My Camera And Other User Can Visit It</string>
+    <string name="camera_setting_action_save">Save Settings</string>
+    <string name="camera_setting_save_exit_title">Save Or Exit</string>
+    <string name="camera_setting_save_exit_msg">You have not save! save it?</string>
+    <string name="camera_setting_save_exit_ok">Save</string>
+    <string name="camera_setting_save_exit_no">Exit</string>
+    <string name="camera_setting_no_new_version">The Camera is Newest</string>
+    <string name="camera_setting_cur_version">The Current is</string>
+    <string name="camera_setting_new_version">The Newest is</string>
+    <string name="camera_setting_save_title">Save it</string>
+    <string name="camera_setting_save_msg">Now Saving...</string>
+
+
+    <string name="play_play_error_msg_title">Play Error</string>
+    <string name="play_play_error_msg_msg">Play Error case POOR WIFI,please try again later</string>
+    <string name="play_play_error_msg_vod">Play Error case No Such Record</string>
+    <string name="vod_last_page">now it is last page</string>
+
+    <string name="center_title_name">Data Center</string>
+    <string name="center_setting_set">Setting</string>
+    <string name="center_setting_title">Center Setting</string>
+    <string name="center_setting_ip_title">Center IP or Address:</string>
+    <string name="center_setting_ip">Input IP or Address</string>
+    <string name="center_setting_port_title">Center Port:</string>
+    <string name="center_setting_port">Input Port</string>
+
+    <string name="push_setting_service_onoff">On/Off Push Service</string>
+
+
+    <string name="push_setting_open">ON</string>
+    <string name="push_setting_close">OFF</string>
+    <string name="push_settting_title">Push Setting</string>
+    <string name="push_setting_push_service">Push Service</string>
+    <string name="push_setting_push_description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		In mollis est vitae erat laoreet consectetur. Mauris dui mauris,
+		dictum vel egestas vel, porta sed ante. Phasellus congue viverra ipsum,
+		in elementum arcu ultricies nec.Morbi tincidunt nisl lacinia, placerat nisi eget, luctus tortor.
+		Morbi efficitur dictum leo, sit amet volutpat lorem sodales nec. Quisque et erat et turpis fringilla condimentum.
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor vulputate libero vitae iaculis.
+		Curabitur id blandit quam. Praesent massa ante, pulvinar vitae sagittis commodo, scelerisque porttitor eros.
+
+    </string>
+
+    <string name="version_unknow">Version Unknow</string>
+    <string name="version_update_title">New Version</string>
+    <string name="version_update_msg">Now Update My New Ecamera!!!</string>
+
+    <string name="lorem">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		In mollis est vitae erat laoreet consectetur. Mauris dui mauris,
+		dictum vel egestas vel, porta sed ante. Phasellus congue viverra ipsum,
+		in elementum arcu ultricies nec.Morbi tincidunt nisl lacinia, placerat nisi eget, luctus tortor.
+		Morbi efficitur dictum leo, sit amet volutpat lorem sodales nec. Quisque et erat et turpis fringilla condimentum.
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor vulputate libero vitae iaculis.
+		Curabitur id blandit quam. Praesent massa ante, pulvinar vitae sagittis commodo, scelerisque porttitor eros.
+		Mauris suscipit a enim nec congue. Mauris tristique cursus aliquet. Nunc quis hendrerit nunc. Praesent tristique tellus purus,
+		a pretium ex gravida id. Cras laoreet malesuada nulla, at bibendum metus ultricies a. Fusce eu ornare arcu. Proin ut molestie est.
+		Vestibulum quis vehicula erat. Nam sed tempus nibh. Sed tortor ante, maximus venenatis odio sed, ultricies maximus lectus.
+		Aliquam sed volutpat ligula. Integer bibendum, magna ac lacinia suscipit,
+		risus libero rutrum justo, sed tempus augue tellus eget est. Curabitur convallis augue nisl,
+		id efficitur urna posuere faucibus. Ut sed egestas nulla, eu finibus metus. Nunc a arcu ante.
+		Aenean ullamcorper dolor non condimentum congue. Aenean mauris nunc, pellentesque at placerat vitae,
+		aliquet quis orci. Curabitur maximus augue ut bibendum sagittis.
+	</string>
+
+
+
+    <string name="share_title">Share</string>
+    <string name="share_dev">Which Device you want to share:</string>
+    <string name="share_name">Input Account who you want to share:</string>
+    <string name="share_name_hint">Share Account</string>
+    <string name="share_history_share_to">Share To:</string>
+    <string name="share_history_share_dev">Device:</string>
+    <string name="share_error_no_choose_device">ERROR:no device!</string>
+    <string name="share_menu_del_add">delete history</string>
+    <string name="share_menu_del_app">delete history</string>
+    <string name="share_menu_mode">mode</string>
+
+    <string name="wheel_dialog_title">Time</string>
+    <string name="wheel_dialog_beg_time">Begin Time</string>
+    <string name="wheel_dialog_end_time">End Time</string>
+</resources>

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PDC工作站</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="username">用户名：</string>
+    <string name="password">密码：</string>
+    <string name="remember_password">记住密码</string>
+    <string name="message">请先连接网络!</string>
+    <string name="ok">确定</string>
+	<string name="all">全部</string>
+    <string name="verification">用户名和密码不能为空</string>
+    <string name="password_error">密码错误</string>
+    <string name="account_error">帐户不存在</string>
+    <string name="online">在线</string>
+    <string name="not_online">不在线</string>
+    <string name="auto_login">自动登录</string>
+    <string name="login">登录</string>
+    <string name="login_fail">登录失败</string>
+    <string name="please_wait">正在处理请稍后</string>
+    <string name="loading">正在登录!</string>
+    <string name="not_online_message">离线设备，无法打开</string>
+    <string name="save_set">正在设置远程设备</string>
+    <string name="camera_list">摄像机</string>
+    <string name="settings">设置</string>
+    <string name="information">个人信息</string>
+    <string name="account">账户管理</string>
+    <string name="sys_message">系统消息</string>
+    <string name="alarm">录像报警</string>
+    <string name="about">关于e看 V1.1.9</string>
+    <string name="exit">注销帐号</string>
+    <string name="email">邮箱地址</string>
+    <string name="mobiletel">手机号码</string>
+    <string name="account_name">用户名</string>
+    <string name="password_change">修改密码</string>
+    <string name="phone_change">修改手机号码</string>
+    <string name="name">昵称</string>
+    <string name="cancel">取消</string>
+    <string name="device_manager_title">选择摄像头</string>
+    <string name="device_name">设备名</string>
+    <string name="device_id">设备ID</string>
+    <string name="vedio_arg">视频图像参数</string>
+    <string name="resolution">分辨率</string>
+    <string name="picture">画质</string>
+    <string name="alarm_messages">运动侦测设置</string>
+    <string name="move_detect">运动侦测录像</string>
+    <string name="push_set">报警通知设置</string>
+    <string name="push_push">运动侦测通知</string>
+	<string name="video_list">录像列表</string>
+	<string name="update">刷新</string>
+	<string name="save_picture">图像已保存到/eCamera目录下</string>
+	<string name="link_timeout">连接超时，请重新连接视频</string>
+	<string name="link_error">网络信号弱，请稍后连接视频</string>
+	<string name="login_error">网络信号弱，请稍后登录</string>
+	<string name="video_over_turn">视频图像180°翻转</string>
+	<string name="turn_over">图像翻转</string>
+	<string name="load_setting">正在读取设置信息</string>
+	<string name="load_videolist">正在读取回放列表</string>
+	<string name="pull_to_refresh">下拉刷新</string>
+	<string name="release_to_refresh">松开刷新</string>
+	<string name="refreshing">正在刷新</string>
+	<string name="last_update">上次更新</string>
+	<string name="select_date">选择时间</string>
+	<string name="load_data">正在加载数据</string>
+	<string name="camera_version_title">摄像机固件版本</string>
+	<string name="camera_new_version">发现新版本</string>
+	<string name="camera_old_version1">当前版本</string>
+	<string name="camera_old_version2">是最新版本</string>
+	<string name="client_new_version">有新版本发布</string>
+	<string name="camera_update">升级</string>
+	<string name="camera_update_notice">升级前请确保摄像机处于在线状态， 升级过程中确保摄像机电源与网络连接，升级完成后摄像机会先下线自动重启并重新上线</string>
+	<string name="auxiliary_set">辅助功能设置</string>
+	<string name="power_land">电源指示灯</string>
+	<string name="vmd_info">视频画面中移动物体，即触发报警，发送报警推送信息，并录像（有安装SD卡）</string>
+	<string name="gain_set">正在获取设置</string>
+	<string name="update_dialog_title">版本升级</string>
+	<string name="update_dialog_message">检测到最新版本，请及时更新！</string>
+	<string name="download_dialog_message">正在下载更新</string>
+	<string name="download_dialog_fail">下载新版本失败</string>
+	<string name="load_more">点击加载更多</string>
+	<string name="no_sdcard">请先插入SD卡</string>
+	<string name="local_files">本地文件</string> 
+	<string name="no_estore">设备没有插入SD卡</string>
+	<string name="share_pic">分享图片</string>
+	<string name="set_fail">网络信号弱，获取配置失败</string>
+	<string name="get_settings_fail">获取配置失败</string>
+	<string name="modify_phone_num_hint">绑定新手机号码</string>
+	<string name="original_password">原始密码</string>
+	<string name="new_password">新密码</string>
+	<string name="confirm_password">确认密码:</string>
+	<string name="modify_password_tips">6&#8211;32个字母数字，区分大小写</string>
+	<string name="wifi_intensity">设备wifi信号强度</string>
+	<string name="set_new_password">正在设置新密码</string>
+	<string name="set_new_phone_num">正在设置新手机号</string>
+	<string name="more">更多</string>
+	<string name="media_lib">媒体库</string>
+	<string name="notice">通知</string>
+	
+	<string name="share">分享</string>
+	<string name="share_device_succeess">分享成功</string>
+	<string name="share_device_fail_already_succeed">分享失败，该帐号已被分享过此设备</string>
+	<string name="share_device_fail_account_not_exist">分享失败，该帐号不存在</string>
+	<string name="share_device_fail">分享失败</string>
+	<string name="add_sharer_account_et_hint_text">输入您要分享的用户帐号</string>
+	<string name="camera_list_sharer_tip">-分享</string>
+	
+	<string name="device_set_share_device">分享设备</string>
+	<string name="device_set_remove_device">删除设备</string>
+	<string name="device_set_sharer_no_property">无操作权限，您是被分享用户</string>
+	<string name="turn_over_0">图像翻转 - 0°</string>
+	<string name="turn_over_180">图像翻转 - 180°</string>
+	<string name="power_land_on">电源指示灯 - 亮</string>
+	<string name="power_land_off">电源指示灯 - 灭</string>
+	
+	<string name="device_share_to_other_add_sharer_account">添加分享帐号</string>
+	<string name="device_share_to_other_tips">已添加的分享帐号</string>
+	<string name="flash_lighting_tips">请将手机闪光灯靠近摄像机镜头</string>
+	<string name="flash_lighting_btn_tips">闪一闪</string>
+	
+	<string name="camera_list_wifi_intensity">信号强度：</string>
+	<string name="set_device_wifi_device_name">摄像机名：</string>
+	
+	<string name="login_or_register_activity_slogan">有它，我会更安心</string>
+	<string name="login_or_register_activity_register">新用户注册</string>
+	<string name="login_or_register_activity_login">已有帐号登录</string>
+	<string name="login_or_register_activity_try">试用e看</string>
+	
+	<string name="big_image_activity_dialog_title_remove">删除</string>
+	<string name="big_image_activity_dialog_message">删除这张照片？</string>
+	<string name="big_image_activity_dialog_yes_button_name">确定</string>
+	<string name="big_image_activity_dialog_no_button_name">取消</string>
+	
+	<string name="modify_password_activity_fail_toast">密码不一致，请重新输入</string>
+	<string name="modify_password_activity_success_toast">密码设置成功</string>
+	<string name="modify_password_activity_passwordformat_fail">密码格式不正确，请重新输入</string>
+	<string name="modify_password_activity_authencation_fail">密码不正确，请重新输入</string>
+	
+	<string name="modify_cellphonenum_activity_fail_toast">设置失败</string>
+	<string name="modify_cellphonenum_activity_success_toast">手机号设置成功</string>
+	
+	<string name="change_devicename_activity_add_success_tip">为您的摄像机起个名字吧</string>
+	<string name="change_devicename_activity_success">设置成功</string>
+	<string name="change_devicename_activity_fail">设置失败，请重新设置</string>
+	
+	<string name="remove_device_popmenu_yes">删除</string>
+	<string name="remove_device_popmenu_no">取消</string>
+	<string name="remove_device_popmenu_logout">注销</string>
+	
+	<string name="device_sharer_item_remove">删除</string>
+	
+	<string name="loacl_file_activity_no_iamge_bg">暂无文件</string>
+	
+	<string name="register_activity_username">用户名:6&#8211;32个字符</string>
+	<string name="register_activity_email">您的邮箱，用于密码找回</string>
+	<string name="register_activity_password">密码:66&#8211;20个字母或数字，区分大小写</string>
+	<string name="register_activity_password_confirm">确认密码</string>
+	<string name="register_activity_show_password">显示密码</string>
+	<string name="register_activity_tips">点击注册，即同意我们的注册条款</string>
+	<string name="register_activity_success">注册成功</string>
+	<string name="register_activity_fail_account_exist">注册失败，账户已存在</string>
+	<string name="register_activity_fail_email_exist">注册失败，邮箱已注册</string>
+	<string name="register_activity_fail">注册失败</string>
+	<string name="register_activity_account_password_empty">帐号，密码不能为空</string>
+	<string name="register_activity_password_differ">两次密码不一致</string>
+	<string name="register_activity_fail_account_format">注册失败，用户名不能包含非法字符</string>
+	
+	<string name="flash_activity_turn_red_btn_name">变红了请点我</string>
+	<string name="flash_activity_turn_red_tip">指示灯变成红色了吗？</string>
+	
+	<string name="send_wifi_config_activity_tip">将手机扬声器靠近摄像机麦克风</string>
+	<string name="send_wifi_config_activity_dialog_title">网络不稳定</string>
+	<string name="send_wifi_config_activity_dialog_message">请检查wifi连接后重试</string>
+	<string name="send_wifi_config_activity_dialog_yes_btn">确定</string>
+	<string name="send_wifi_config_activity_tip_sending">正在发送指令&#8230;</string>
+	<string name="send_wifi_config_activity_tip_finish">发送完毕</string>
+	<string name="send_wifi_config_activity_btn_send">发送</string>
+	<string name="send_wifi_config_activity_btn_send_finish">变绿了请点我</string>
+	<string name="send_wifi_config_activity_final_tips">指示灯变成绿色就成功啦！否则请重新发送</string>
+	
+	<string name="set_wifi_activity_device_name">摄像机名:</string>
+	<string name="set_wifi_activity_input_device_name">输入摄像机名称</string>
+	<string name="set_wifi_activity_wifi_name">无线局域网:</string>
+	<string name="set_wifi_activity_wifi_password">密码:</string>
+	<string name="set_wifi_activity_input_wifi_password">输入wifi密码</string>
+	
+	<string name="match_activity_tips">摄像机正在配置，请稍候 &#8230;</string>
+	<string name="match_activity_fail_tips">添加失败，网络不稳定，检查网络后请重新添加</string>
+	<string name="match_activity_fail_dialog_title">添加失败</string>
+	<string name="match_activity_fail_dialog_message">网络不稳定，检查网络后请重新添加</string>
+	<string name="match_activity_fail_dialog_yes_btn">确定</string>
+	<string name="match_activity_success_dialog_title">添加成功</string>
+	<string name="match_activity_success_dialog_message">摄像机添加成功</string>
+	<string name="match_activity_success_dialog_yes_btn">确定</string>
+	
+	<string name="navigation_activity_btn">进入e看</string>
+	
+	<string name="QR_code">二维码</string>
+	<string name="msg_default_status">将二维码放入框内，即可自动扫描</string>
+	<string name="title_popup_listen">听一听</string>
+	<string name="title_popup_scan">扫一扫</string>
+	<string name="popup_window_hd">高清</string>
+	<string name="popup_window_sd">标清</string>
+	
+	<string name="invalid_code">非法二维码</string>
+	
+	<style name="MyCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+		<item name="android:button">@drawable/cb_select</item>
+	</style>
+	
+	<string name="play_talk">按住说话</string>
+	<string name="device_set_no_permission">没有操作权限</string>
+
+	<!-- new ui -->
+	<string name="login_use_custom">自定义服务器?</string>
+	<string name="login_server_select">服务器:</string>
+	<string name="login_server">www.haoweis.com:8800</string>
+	<string name="login_not_user">还不是e看用户?</string>
+	<string name="login_register">注册</string>
+	<string name="login_test_user">暂时跳过</string>
+	<string name="login_try">您将使用试用帐号登入e看，访问已经配置好的默认摄像机</string>
+	<string name="login_other">或</string>
+	<string name="register">注册</string>
+	<string name="prompt_email">邮箱：</string>
+	<string name="reg_if_bind_finger">绑定指纹？</string>
+	<string name="reg_bind_finger">然后就可以用指纹登入了！当然您也能以后再绑定</string>
+	<string name="reg_finger_support_error">未录入或设备不支持指纹！</string>
+	<string name="reg_field_empty">不能为空</string>
+	<string name="reg_usename_not_valid">用户名长度：6-32</string>
+	<string name="reg_email_not_valid">邮箱地址无效</string>
+
+
+
+
+	<string name="save_db">绑定当前帐号与指纹信息</string>
+	<string name="save_db_ok">绑定成功!</string>
+	<string name="save_db_error">绑定失败！</string>
+	<string name="save_db_no_support">绑定不支持！</string>
+	<string name="login_other_fingerprint">登入</string>
+	<string name="login_other_fingerprint_no_support">指纹识别不支持！</string>
+	<!-- 指纹识别 -->
+	<string name="finger_title">指纹识别</string>
+	<string name="finger_cancel">取消</string>
+	<string name="finger_login_with_password">使用密码登入</string>
+	<string name="fingerprint_description">通过识别指纹登入绑定的账号</string>
+	<string name="fingerprint_hint">请按下获取指纹</string>
+	<string name="fingerprint_failed">验证失败..请重新尝试!!</string>
+	<string name="fingerprint_error">失败 请等待片刻再尝试</string>
+	<string name="fingerprint_ok">验证成功!!  正在登入..</string>
+	<string name="fingerprint_save_ok">验证成功!!  正在保存..</string>
+	<string name="fingerprint_sign_error">登入失败 请用密码登入 </string>
+	<string name="fingerprint_no_support">不支持指纹区分</string>
+	<!-- 唯一码发送 -->
+	<string name="phone_info_send_title">注册手机</string>
+	<string name="phone_info_send_description">手机信息未注册</string>
+	<string name="phone_info_sending">正在注册..</string>
+	<string name="phone_info_send_ok">注册成功</string>
+	<string name="phone_info_send_fail">注册失败&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;请稍后重新注册</string>
+	<string name="phone_info_send_again">重新发送</string>
+	<string name="phone_info_not_authenticated">设备尚未被授权，需要在服务器授权</string>
+
+	<string name="finger_save_title">保存指纹</string>
+	<string name="fingerprint_save_description">保存指纹与账号信息</string>
+
+
+	<string name="home_guest">访客</string>
+	<string name="home_guest_email">正在使用访客模式</string>
+
+	<string name="home_drawer_item_home">主页</string>
+	<string name="home_drawer_item_center">中心</string>
+	<string name="home_drawer_item_uid">UID</string>
+	<string name="home_drawer_logout">退出</string>
+	<string name="home_drawer_second_head">更多设置</string>
+	<string name="home_drawer_connect">通讯方式</string>
+	<string name="home_drawer_turn_server">流转</string>
+	<string name="home_drawer_encrypt">加密</string>
+	<string name="home_drawer_server_address">服务器地址</string>
+	<string name="home_drawer_push_service">推送服务</string>
+	<string name="home_drawer_turn_address">流转设置</string>
+	<string name="home_drawer_server_bind">绑定账户</string>
+	<string name="home_fragment_devices">设备列表</string>
+	<string name="home_fragment_medias">Media</string>
+	<string name="home_fragment_notice">Notice</string>
+	<string name="home_fragment_pdc">人流统计</string>
+	<string name="home_drawer_changer_user_error">切换用户失败</string>
+	<string name="drawer_item_help">帮助</string>
+	<string name="home_setting_set">设置</string>
+	<string name="home_setting_help">帮助</string>
+	<string name="home_setting_like">喜欢</string>
+	<string name="home_setting_share">分享</string>
+	<string name="home_setting_search">查询</string>
+    <string name="home_setting_scope">范围</string>
+    <string name="home_setting_unread">未读</string>
+    <string name="home_setting_read">已读</string>
+    <string name="home_setting_read_all">全部</string>
+	<string name="home_setting_show_chart">图表</string>
+	<string name="add_camera_title">添加新的摄像机</string>
+	<string name="add_ap">添加AP摄像机</string>
+	<string name="add_flash">扫一扫</string>
+	<string name="add_scan">扫一扫</string>
+	<string name="add_listen">听一听</string>
+	<string name="add_listen_subtitle">命名设备和设置wifi</string>
+	<string name="add_listen_no_ssid">请选择摄像机所在的wifi</string>
+	<string name="add_listen_no_name">请给您的新摄像机起个名吧</string>
+	<string name="add_listen_no_pwd">请输入wifi密码</string>
+	<string name="add_listen_open_location">打开定位</string>
+	<string name="add_listen_device_name_title">命名：</string>
+	<string name="add_listen_device_name">给您的新设备起个名字吧</string>
+	<string name="add_listen_device_password_title">WIFI 密码:</string>
+	<string name="add_listen_device_password">输入您的WIFI密码</string>
+	<string name="add_listen_device_wifi_title">选择您的Wifi:</string>
+	<string name="add_listen_device_wifi_tip">没有wifi? \n您需要打开您的定位</string>
+	<string name="add_listen_device_next">下一步</string>
+	<string name="add_listen_device_tb_title">听一听</string>
+	<string name="add_listen_device_error_wifi">请选择您的WIFI</string>
+	<string name="add_ap_dialog_title">添加AP摄像机</string>
+	<string name="add_normal">添加普通摄像机</string>
+	<string name="add_fail">添加摄像机失败！！！</string>
+	<string name="add_ap_ip_title">IP:</string>
+	<string name="add_ap_ip">请输入您摄像机的IP地址</string>
+	<string name="add_ap_port_title">端口:</string>
+	<string name="add_ap_port">请输入您摄像机的端口号</string>
+	<string name="add_ap_btn">添加</string>
+	<string name="add_ap_ip_error">输入不符合IP格式域名格式</string>
+	<string name="add_ap_port_error">需要输入数字</string>
+	<string name="notice_no_more">没有更多消息</string>
+
+	<string name="device_item_remove_title">删除设备</string>
+	<string name="device_item_remove_msg">您确定要删除设备？</string>
+	<string name="device_item_remove_fail">删除设备失败</string>
+	<string name="server_setting_title">服务器设置</string>
+	<string name="server_setting_ip_title">服务器IP或域名:</string>
+	<string name="server_setting_ip">输入服务器的IP或域名</string>
+	<string name="server_setting_port_title">服务器端口:</string>
+	<string name="server_setting_port">输入服务器的端口</string>
+	<string name="server_setting_ssl">服务器使用SSL</string>
+	<string name="server_setting_service_type">服务器通讯模式：</string>
+	<string name="server_setting_video_port_title">视频端口:</string>
+	<string name="server_setting_video_port">输入视频端口</string>
+	<string name="server_setting_default">默认</string>
+	<string name="server_setting_btn">保存</string>
+
+	<string name="camera_settting_title">摄像机设置</string>
+	<string name="camera_setting_title_name">摄像机名称</string>
+	<string name="camera_setting_name_change">修改</string>
+	<string name="camera_setting_rename_title">重命名</string>
+	<string name="camera_setting_rename_input">输入摄像机新名称</string>
+	<string name="camera_setting_param">参数</string>
+	<string name="camera_setting_resolution_dec">视频图像的分辨率</string>
+	<string name="camera_setting_picture_dec">获取的图片质量</string>
+	<string name="camera_setting_assist">辅助</string>
+	<string name="camera_setting_lamp">指示灯</string>
+	<string name="camera_setting_detection">侦测</string>
+	<string name="camera_setting_det_rec">移动侦测录像</string>
+	<string name="camera_setting_det_rec_dec">视频画面中移动物体，即触发报警并录像（有安装SD卡）</string>
+	<string name="camera_setting_det_alarm">移动侦测报警推送</string>
+	<string name="camera_setting_det_alarm_dec">推送报警给我的手机</string>
+	<string name="camera_setting_camera_version">版本</string>
+	<string name="camera_setting_camera_updata">升级摄像机</string>
+	<string name="camera_setting_share">@string/share</string>
+	<string name="camera_setting_share_device">分享摄像机</string>
+	<string name="camera_setting_share_device_dec">分享我的摄像机让其他用户可以访问</string>
+	<string name="camera_setting_action_save">保存设置</string>
+	<string name="camera_setting_save_exit_title">保存和退出</string>
+	<string name="camera_setting_save_exit_msg">您尚未保存！是否要保存?</string>
+	<string name="camera_setting_save_exit_ok">保存</string>
+	<string name="camera_setting_save_exit_no">退出</string>
+	<string name="camera_setting_no_new_version">当前摄像机版本是最新的</string>
+	<string name="camera_setting_cur_version">当前版本为</string>
+	<string name="camera_setting_new_version">最新版本为</string>
+	<string name="camera_setting_save_title">保存设置</string>
+	<string name="camera_setting_save_msg">正在保存...</string>
+
+
+	<string name="vod_last_page">现在已经是最后一页了</string>
+	<string name="play_play_error_msg_title">播放失败</string>
+	<string name="play_play_error_msg_msg">播放失败，wifi信号弱，请稍后尝试</string>
+	<string name="play_play_error_msg_vod">播放失败，没有录像</string>
+	<string name="center_title_name">数据中心</string>
+	<string name="center_setting_set">设置</string>
+	<string name="center_setting_title">中心设置</string>
+	<string name="center_setting_ip_title">中心IP或域名:</string>
+	<string name="center_setting_ip">输入IP或域名</string>
+	<string name="center_setting_port_title">中心端口:</string>
+	<string name="center_setting_port">输入端口</string>
+
+
+    <string name="push_setting_service_onoff">开/关 推送服务</string>
+
+    <string name="push_setting_open">开启</string>
+    <string name="push_setting_close">关闭</string>
+    <string name="push_settting_title">推送设置</string>
+	<string name="push_setting_push_service">推送服务</string>
+	<string name="push_setting_push_description">
+		在开启摄像机移动侦测时，如果摄像机侦测到了报警，远端服务器会将报警推送给E看客户端。\n这样，E看客户端将在第一时间收到报警，并且显示通知。无论此应用程序是否被开启，或者是否是在前台。\n为了程序能够在后台持续工作，您需要将程序设置为允许后台运行（打开推送服务就可以设置了），
+		当然，如果您不想让程序在后台运行或者不想再收到推送，您也可以关闭推送服务。
+	</string>
+
+	<string name="version_unknow">未知版本</string>
+
+	<string name="version_update_title">新版本</string>
+	<string name="version_update_msg">我们发布新版本啦，赶快升级吧!!!</string>
+	<string name="share_title">分享</string>
+	<string name="share_dev">选择您要分享的设备：</string>
+	<string name="share_name">输入要分享的用户名：</string>
+	<string name="share_name_hint">分享的用户</string>
+	<string name="share_history_share_to">分享给：</string>
+	<string name="share_history_share_dev">设备：</string>
+    <string name="share_error_no_choose_device">错误：没有选择设备！</string>
+    <string name="share_menu_del_add">删除分享记录</string>
+    <string name="share_menu_del_app">删除申请记录</string>
+    <string name="share_menu_mode">模式</string>
+
+	<string name="wheel_dialog_title">选择时间</string>
+	<string name="wheel_dialog_beg_time">开始时间</string>
+	<string name="wheel_dialog_end_time">结束时间</string>
+</resources>
