@@ -105,6 +105,7 @@ class LineChartFragment : Fragment(),IPDCContract.IView {
             for (j in 0 until CHARTS_LEN) {
                 manDay!![i][j] = (Math.random() * 100).toInt()
             }
+
         }
 
     }
