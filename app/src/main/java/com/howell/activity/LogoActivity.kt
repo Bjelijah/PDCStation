@@ -54,7 +54,7 @@ class LogoActivity : BaseActivity(),ILoginContract.IVew {
     override fun bindPresenter() {
         if (mPresenter==null)mPresenter=LoginHttpPresenter()
         mPresenter?.bindView(this)
-        Log.i("123",this.toString())
+
 
         mPresenter?.init(this)
     }

@@ -17,6 +17,8 @@
     <string name="not_online">offline</string>
     <string name="auto_login">Automatic login</string>
     <string name="login">Login</string>
+    <string name="station_title">Welcome to PDC</string>
+    <string name="station_entry">Entry</string>
     <string name="login_fail">Login fail</string>
     <string name="please_wait">Please wait</string>
     <string name="loading">loading</string>
@@ -284,7 +286,7 @@
     <string name="home_drawer_item_uid">UID</string>
     <string name="home_drawer_logout">Exit</string>
 
-    <string name="home_drawer_item_home">Home</string>
+    <string name="home_drawer_item_home">Station</string>
     <string name="home_drawer_item_center">Center</string>
     <string name="home_drawer_second_head">More Setting</string>
     <string name="home_drawer_connect">Communication Mode</string>

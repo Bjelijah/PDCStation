@@ -161,7 +161,7 @@ class HomeActivity:BaseActivity(), FingerPrintBaseDialog.OnFignerPrintIDListener
                 .withFullscreen(true)
                 .addDrawerItems(
                         PrimaryDrawerItem().withName(R.string.home_drawer_item_home).withIcon(FontAwesome.Icon.faw_home).withIdentifier(ID_DRAWER_HOME),
-                        PrimaryDrawerItem().withName(R.string.home_drawer_item_center).withIcon(FontAwesome.Icon.faw_cloud).withIdentifier(ID_DRAWER_CENTER),
+//                        PrimaryDrawerItem().withName(R.string.home_drawer_item_center).withIcon(FontAwesome.Icon.faw_cloud).withIdentifier(ID_DRAWER_CENTER),
                         SectionDrawerItem().withName(R.string.home_drawer_second_head),
                         SecondaryDrawerItem().withName(R.string.home_drawer_server_address).withIcon(Octicons.Icon.oct_server).withIdentifier(ID_DRAWER_SERVER),
                         SecondaryDrawerItem().withName(R.string.home_drawer_push_service).withIcon(Octicons.Icon.oct_alert).withIdentifier(ID_DRAWER_PUSH),
@@ -203,7 +203,11 @@ class HomeActivity:BaseActivity(), FingerPrintBaseDialog.OnFignerPrintIDListener
             finish()},300)
     }
 
-    private fun funHome(){}
+    private fun funHome(){
+        //todo show station choice activity
+        startActivity(Intent(this,StationActivity::class.java))
+        finish()
+    }
 
     private fun funCenter(){}
 

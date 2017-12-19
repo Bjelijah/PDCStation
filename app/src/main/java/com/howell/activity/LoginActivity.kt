@@ -97,6 +97,11 @@ class LoginActivity :BaseActivity(),ILoginContract.IVew, FingerPrintBaseDialog.O
         startActivity(Intent(this@LoginActivity,HomeActivity::class.java)
                 .putExtra("account",account)
                 .putExtra("email",email))
+
+        //todo first station choice
+//        startActivity(Intent(this,StationActivity::class.java))
+
+
         finish()
     }
 

@@ -36,6 +36,10 @@
         <activity android:name="com.howell.activity.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyAppThemeLogin" />
+        <activity android:name="com.howell.activity.StationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppThemeRegister"
+            android:launchMode="singleTask"/>
         <activity android:name="com.howell.activity.HomeActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"

@@ -49,6 +49,7 @@ open class FingerPrintBaseDialog() : DialogFragment(), FingerprintUiHelper.Callb
         super.onCreate(savedInstanceState)
         retainInstance = true
         setStyle(DialogFragment.STYLE_NORMAL, android.R.style.Theme_Material_Light_Dialog)
+
     }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {

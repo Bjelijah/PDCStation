@@ -17,6 +17,8 @@
     <string name="not_online">不在线</string>
     <string name="auto_login">自动登录</string>
     <string name="login">登录</string>
+	<string name="station_title">欢迎使用</string>
+	<string name="station_entry">进入</string>
     <string name="login_fail">登录失败</string>
     <string name="please_wait">正在处理请稍后</string>
     <string name="loading">正在登录!</string>
@@ -266,7 +268,7 @@
 	<string name="home_guest">访客</string>
 	<string name="home_guest_email">正在使用访客模式</string>
 
-	<string name="home_drawer_item_home">主页</string>
+	<string name="home_drawer_item_home">站点</string>
 	<string name="home_drawer_item_center">中心</string>
 	<string name="home_drawer_item_uid">UID</string>
 	<string name="home_drawer_logout">退出</string>
