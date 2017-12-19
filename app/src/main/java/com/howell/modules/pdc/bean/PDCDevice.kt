@@ -1,9 +1,11 @@
 package com.howell.modules.pdc.bean
 
+import java.io.Serializable
+
 /**
  * Created by Administrator on 2017/12/12.
  */
-data class PDCDevice(var id:String) {
+data class PDCDevice(var id:String) :Serializable{
     var createTime:String?      = null
     var name:String?            = null
     var model:String?           = null

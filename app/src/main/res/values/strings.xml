@@ -470,4 +470,7 @@
     <string name="wheel_dialog_title">Time</string>
     <string name="wheel_dialog_beg_time">Begin Time</string>
     <string name="wheel_dialog_end_time">End Time</string>
+
+    <string name="charts_hour_tab">1hour Man</string>
+    <string name="charts_Day_tab">1Day Man</string>
 </resources>

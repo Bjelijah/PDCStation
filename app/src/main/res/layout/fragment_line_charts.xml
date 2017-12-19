@@ -6,19 +6,14 @@
     android:padding="15dp"
     >
 
-    <lecho.lib.hellocharts.view.LineChartView
-        android:id="@+id/lc_hour"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
-
 
     <lecho.lib.hellocharts.view.LineChartView
-        android:id="@+id/lc_day"
+        android:id="@+id/lcv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:layout_marginTop="20dp"/>
+        android:visibility="invisible"
+        />
+
 
 
 

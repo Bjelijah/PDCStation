@@ -18,13 +18,26 @@
         android:paddingRight="10dp"
         >
 
+
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/item_pdc_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"/>
+
+
         <TextView
             android:id="@+id/item_pdc_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test"
-            android:layout_alignParentLeft="true"
+            android:layout_toRightOf="@id/item_pdc_online"
+
             android:layout_centerVertical="true"
+
             />
 
         <ImageView

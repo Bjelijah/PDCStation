@@ -223,6 +223,12 @@
     </style>
 
 
+    <style name="MyappThemeCharts" parent="MyAppThemeHome">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="colorPrimary">@color/home_bk</item>
+        <item name="colorPrimaryDark">@color/home_bk_dark</item>
+    </style>
 
 
     <style name="MyappThemeVideoList" parent="MaterialDrawerTheme.TranslucentStatus">
@@ -327,9 +333,9 @@
     </style>
 
 
-    <style name="wheel_dialog" parent="@android:style/Theme.Material.Dialog.Alert">
+    <style name="wheel_dialog" parent="@android:style/Theme.Material.Dialog.Alert"/>
+    
 
-    </style>
-
-
+    
+    
 </resources>

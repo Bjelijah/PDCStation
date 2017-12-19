@@ -16,5 +16,6 @@ class LineColumnChartsActivity :BaseActivity() {
     }
 
     override fun initData() {
+
     }
 }

@@ -21,6 +21,7 @@
         android:id="@+id/login_form"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
         >
 
         <LinearLayout
@@ -155,21 +156,14 @@
 
                 </LinearLayout>
 
-
-
-
-
                 <Switch
                     android:id="@+id/login_sw_custom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-
+                    android:visibility="gone"
                     />
-
-
-
 
             </RelativeLayout>
 
@@ -242,6 +236,7 @@
                 android:textSize="20sp"
                 android:textColor="@color/white"
                 android:layout_marginTop="@dimen/group_vertical_margin_top"
+                android:visibility="gone"
                 />
 
             <Button
@@ -253,7 +248,8 @@
                 android:text="@string/login_register"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:background="@drawable/login_ll"/>
+                android:background="@drawable/login_ll"
+                android:visibility="gone"/>
 
 
 
@@ -265,7 +261,8 @@
                 android:layout_marginTop="@dimen/group_vertical_margin_top"
                 style="?android:attr/buttonBarButtonStyle"
                 android:paddingLeft="5dp"
-                android:paddingRight="5dp">
+                android:paddingRight="5dp"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="190dp"

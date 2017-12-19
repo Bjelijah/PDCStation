@@ -414,4 +414,7 @@
 	<string name="wheel_dialog_title">选择时间</string>
 	<string name="wheel_dialog_beg_time">开始时间</string>
 	<string name="wheel_dialog_end_time">结束时间</string>
+
+	<string name="charts_hour_tab">1小时人流量</string>
+	<string name="charts_Day_tab">1天人流量</string>
 </resources>

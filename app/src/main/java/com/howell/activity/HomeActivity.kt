@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.os.Handler
 import android.os.PersistableBundle
 import android.support.design.widget.CollapsingToolbarLayout
 import android.support.design.widget.FloatingActionButton
@@ -187,15 +188,17 @@ class HomeActivity:BaseActivity() {
 
 
     private fun funExit(){
-        startActivity(Intent(this@HomeActivity,LoginActivity::class.java))
-        finish()
+        mRootView.postDelayed({startActivity(Intent(this@HomeActivity,LoginActivity::class.java))
+            finish()},300)
     }
 
     private fun funHome(){}
 
     private fun funCenter(){}
 
-    private fun funServer(){}
+    private fun funServer(){
+        startActivity(Intent(this,ServerSetActivity::class.java))
+    }
 
     private fun funBind(){}
 

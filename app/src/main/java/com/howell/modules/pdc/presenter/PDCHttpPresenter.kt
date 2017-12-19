@@ -4,6 +4,7 @@ import android.util.Log
 import com.howell.modules.pdc.bean.PDCDevice
 import com.howellsdk.api.ApiManager
 import com.howellsdk.net.http.bean.PDCDeviceList
+import com.howellsdk.net.http.bean.PDCSample
 import com.howellsdk.net.http.bean.PDCSampleList
 import com.howellsdk.utils.Util
 import io.reactivex.Observable
@@ -13,6 +14,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * Created by Administrator on 2017/12/12.
@@ -25,9 +27,7 @@ class PDCHttpPresenter : PDCBasePresenter() {
     override fun queryDevice() {
         ApiManager.getInstance().getHWHttpService(mUrl)
                 .queryPdcDevices(ApiManager.HttpHelp.getCookie(ApiManager.HttpHelp.Type.PDC_DEVICE),null,null,null)
-                .map { pdcDeviceList ->
-                    pdcDeviceList.pdcDevices
-                }
+                .map { pdcDeviceList -> pdcDeviceList.pdcDevices }
                 .flatMap { list -> Observable.fromIterable(list) }
                 .map { d ->
                     val bean = PDCDevice(d.id)
@@ -64,46 +64,30 @@ class PDCHttpPresenter : PDCBasePresenter() {
                 .subscribe(object : SingleObserver<List<PDCDevice>> {
                     override fun onSuccess(l: List<PDCDevice>) {
                         Log.i("123","$l")
+                        mView?.onQueryDeviceResult(l as ArrayList<PDCDevice>)
                     }
-
-                    override fun onError(e: Throwable) {
-                        e.printStackTrace()
-                    }
-
-                    override fun onSubscribe(d: Disposable) {
-                        addDisposable(d)
-                    }
+                    override fun onError(e: Throwable)  = e.printStackTrace()
+                    override fun onSubscribe(d: Disposable)  = addDisposable(d)
                 })
     }
-
 
     override fun querySamples(id: String, unit: String, beg: String, end: String) {
         ApiManager.getInstance().hwHttpService.queryPdcDeviceSamples(
                 ApiManager.HttpHelp.getCookie(ApiManager.HttpHelp.Type.PDC_DEVICE_SAMPLES,id),
                 id, unit, beg, end, null, null)
+                .map { l -> l.pdcSamples }
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(object :Observer<PDCSampleList>{
-                    override fun onError(e: Throwable) {
-                        e.printStackTrace()
+                .subscribe(object :Observer<ArrayList<PDCSample>>{
+                    override fun onError(e: Throwable) = e.printStackTrace()
+
+                    override fun onNext(l: ArrayList<PDCSample>) {
+                        mView?.onQuerySimpleResult(l,unit)
                     }
 
-                    override fun onNext(l: PDCSampleList) {
-                        Log.i("123","$l")
-                    }
-
-                    override fun onSubscribe(d: Disposable) {
-                        addDisposable(d)
-                    }
-
-                    override fun onComplete() {
-                    }
+                    override fun onSubscribe(d: Disposable) = addDisposable(d)
+                    override fun onComplete() {}
                 })
-
-
-
-
-
     }
 
 }

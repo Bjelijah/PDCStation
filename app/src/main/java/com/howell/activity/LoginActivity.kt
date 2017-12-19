@@ -1,32 +1,38 @@
 package com.howell.activity
 
 import android.content.Intent
+import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
-import android.widget.AutoCompleteTextView
-import android.widget.Button
-import android.widget.EditText
+import android.widget.*
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
 import com.howell.action.ConfigAction
+import com.howell.action.FingerprintUiHelper
+import com.howell.activity.view.FingerPrintBaseDialog
 import com.howell.modules.login.ILoginContract
 import com.howell.modules.login.bean.Type
 import com.howell.modules.login.presenter.LoginHttpPresenter
 import com.howell.pdcstation.R
+import com.howell.utils.DialogUtils
+import com.howell.utils.Util
 
 /**
  * Created by Administrator on 2017/11/28.
  */
 class LoginActivity :BaseActivity(),ILoginContract.IVew {
 
-    @BindView(R.id.login_et_username) lateinit var mUserNameView:AutoCompleteTextView
-    @BindView(R.id.login_et_password) lateinit var mPasswordView:EditText
-    @BindView(R.id.login_btn_login)   lateinit var mloginBtn:Button
-    @BindView(R.id.login_form)        lateinit var mLoginFormView:View
-
+    @BindView(R.id.login_et_username)     lateinit var mUserNameView:AutoCompleteTextView
+    @BindView(R.id.login_et_password)     lateinit var mPasswordView:EditText
+    @BindView(R.id.login_btn_login)       lateinit var mloginBtn:Button
+    @BindView(R.id.login_form)            lateinit var mLoginFormView:View
+    @BindView(R.id.login_progress)        lateinit var mProgressBar:ProgressBar
+    @BindView(R.id.login_ll_custom)       lateinit var mCustom:LinearLayout
+    @BindView(R.id.login_tv_server)       lateinit var mServerTv:TextView
+    @BindView(R.id.login_fab_fingerprint) lateinit var mFinger: FloatingActionButton
 
     private var mPresenter:ILoginContract.IPresenter?=null
 
@@ -34,6 +40,15 @@ class LoginActivity :BaseActivity(),ILoginContract.IVew {
         super.onDestroy()
         unbindPresenter()
     }
+
+    override fun onResume() {
+        super.onResume()
+        ConfigAction.instance.load(this)
+        val ip = ConfigAction.instance.mServerIP
+        val port = ConfigAction.instance.mServerPort
+        mServerTv.text = getString(R.string.login_server_select) + ip + ":" + port
+    }
+
 
     override fun bindPresenter() {
         if (mPresenter==null)mPresenter=LoginHttpPresenter()
@@ -50,6 +65,7 @@ class LoginActivity :BaseActivity(),ILoginContract.IVew {
 
     override fun onError(type: Type) {
         Log.i("123","type=$type")
+        mProgressBar.visibility = View.INVISIBLE
         when(type){
             Type.ACCOUNT_NOT_EXIST  ->{
                 mUserNameView.requestFocus()
@@ -70,6 +86,7 @@ class LoginActivity :BaseActivity(),ILoginContract.IVew {
 
     override fun onLoginSuccess(account: String, email: String) {
         Log.i("123","onLoginSuccess account=$account email=$email")
+        mProgressBar.visibility = View.INVISIBLE
         startActivity(Intent(this@LoginActivity,HomeActivity::class.java)
                 .putExtra("account",account)
                 .putExtra("email",email))
@@ -85,7 +102,6 @@ class LoginActivity :BaseActivity(),ILoginContract.IVew {
     }
 
     override fun initView() {
-
         bindPresenter()
     }
 
@@ -116,6 +132,7 @@ class LoginActivity :BaseActivity(),ILoginContract.IVew {
             //TODO get and save server info
             mPresenter?.init(this)
             mPresenter?.login(username,password)
+            mProgressBar.visibility = View.VISIBLE
         }
     }
 
@@ -125,7 +142,22 @@ class LoginActivity :BaseActivity(),ILoginContract.IVew {
         attemptLogin()
     }
 
+    @OnClick(R.id.login_ll_custom)fun onLoginCustomServerClick(v:View){
+        startActivity(Intent(this,ServerSetActivity::class.java))
+    }
+
+    @OnClick(R.id.login_fab_fingerprint) fun onFingerClick(v:View){
+        if (!Util.isNewApi || !FingerprintUiHelper.isFingerAvailable(this)) {
+            DialogUtils.postMsgDialog(this, getString(R.string.login_other_fingerprint), getString(R.string.login_other_fingerprint_no_support), null)
+            return
+        }
+        val fingerFragment = FingerPrintBaseDialog()
+//        fingerFragment.setHandler(mHandler)
+        fingerFragment.show(supportFragmentManager, "fingerLogin")
+    }
+
     private fun testFoo(){
+
         ConfigAction.instance.saveThisServerInfo(this,"116.228.67.70",8800,false)
     }
 }
