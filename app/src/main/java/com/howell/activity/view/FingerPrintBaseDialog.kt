@@ -8,6 +8,7 @@ import android.hardware.fingerprint.FingerprintManager
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v4.app.DialogFragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -16,12 +17,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.howell.action.FingerprintUiHelper
 import com.howell.pdcstation.R
+import org.w3c.dom.Text
 
 /**
  * Created by Administrator on 2017/12/18.
  */
 @SuppressLint("NewApi")
-open class FingerPrintBaseDialog : DialogFragment(), FingerprintUiHelper.Callback {
+open class FingerPrintBaseDialog() : DialogFragment(), FingerprintUiHelper.Callback {
 
 
     protected var mCancel: TextView?              = null
@@ -29,6 +31,19 @@ open class FingerPrintBaseDialog : DialogFragment(), FingerprintUiHelper.Callbac
     protected var mWait: TextView?                = null
     protected var mIvState: ImageView?            = null
     protected var mFinger: FingerprintUiHelper?   = null
+    protected var onFinger:OnFignerPrintIDListener?                = null
+    protected var mTvMsg: TextView?               = null
+
+    protected var mTitle:String?                  = null
+    protected var mMsg:String?                    = null
+
+    @SuppressLint("ValidFragment")
+    constructor(o:OnFignerPrintIDListener,title:String,msg:String):this(){
+        onFinger = o
+        mTitle = title
+        mMsg = msg
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,10 +61,12 @@ open class FingerPrintBaseDialog : DialogFragment(), FingerprintUiHelper.Callbac
         mTvState  = v?.findViewById(R.id.fingerprint_status)
         mIvState  = v?.findViewById(R.id.fingerprint_icon)
         mWait     = v?.findViewById(R.id.tv_finger_wait)
+        mTvMsg    = v?.findViewById(R.id.fingerprint_description)
+        mTvMsg?.text = mMsg
         mFinger = FingerprintUiHelper(context, context?.getSystemService(FingerprintManager::class.java)!!,this)
         mFinger?.startListening(null)
         dialog.setCanceledOnTouchOutside(false)
-        dialog.setTitle(getString(R.string.finger_title))
+        dialog.setTitle(mTitle)
         return v
     }
 
@@ -91,6 +108,7 @@ open class FingerPrintBaseDialog : DialogFragment(), FingerprintUiHelper.Callbac
         WAIT,
         FAIL,
         OK,
+        SAVE_OK,
         ERROR,
         SIGN_ERROR
     }
@@ -114,6 +132,12 @@ open class FingerPrintBaseDialog : DialogFragment(), FingerprintUiHelper.Callbac
                 mTvState?.text = getString(R.string.fingerprint_ok)
                 mTvState?.setTextColor(context.resources.getColor(R.color.finger_green))
             }
+            MyState.SAVE_OK ->{
+                mIvState?.setImageDrawable(context.resources.getDrawable(R.mipmap.ic_fp_ok))
+                mTvState?.text = getString(R.string.fingerprint_save_ok)
+                mTvState?.setTextColor(context.resources.getColor(R.color.finger_green))
+            }
+
             MyState.ERROR -> {
                 mIvState?.setImageDrawable(context.resources.getDrawable(R.mipmap.common_no_highlighted))
                 mTvState?.text = getString(R.string.fingerprint_error)
@@ -129,6 +153,8 @@ open class FingerPrintBaseDialog : DialogFragment(), FingerprintUiHelper.Callbac
         }
     }
 
-
+    interface OnFignerPrintIDListener{
+        fun onFignerPrint(res:Boolean,id:Int?,name:String?,pwd:String?)
+    }
 
 }

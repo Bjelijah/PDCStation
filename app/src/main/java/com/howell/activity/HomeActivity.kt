@@ -9,6 +9,7 @@ import android.os.Handler
 import android.os.PersistableBundle
 import android.support.design.widget.CollapsingToolbarLayout
 import android.support.design.widget.FloatingActionButton
+import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
@@ -19,10 +20,16 @@ import android.widget.ImageView
 import butterknife.BindView
 import butterknife.ButterKnife
 import com.bumptech.glide.Glide
+import com.howell.action.FingerprintUiHelper
 import com.howell.activity.fragment.DeviceFragment
 import com.howell.activity.fragment.HomeBaseFragment
 import com.howell.activity.fragment.PDCFragment
+import com.howell.activity.view.FingerPrintBaseDialog
+import com.howell.activity.view.FingerPrintLoadDialog
+import com.howell.activity.view.FingerPrintSaveDialog
 import com.howell.pdcstation.R
+import com.howell.utils.DialogUtils
+import com.howell.utils.Util
 import com.mikepenz.fontawesome_typeface_library.FontAwesome
 import com.mikepenz.google_material_typeface_library.GoogleMaterial
 import com.mikepenz.iconics.IconicsDrawable
@@ -39,7 +46,8 @@ import java.util.*
 /**
  * Created by Administrator on 2017/11/29.
  */
-class HomeActivity:BaseActivity() {
+class HomeActivity:BaseActivity(), FingerPrintBaseDialog.OnFignerPrintIDListener {
+
 
     @BindView(R.id.toolbar)                 lateinit var mToolbar: Toolbar
     @BindView(R.id.collapsing_toolbar)      lateinit var mCollapsingTbLayout:CollapsingToolbarLayout
@@ -107,6 +115,9 @@ class HomeActivity:BaseActivity() {
         Glide.with(this).load("https://unsplash.it/600/300/?random").centerCrop().into(mImageView)
     }
 
+    override fun onFignerPrint(res:Boolean,id:Int?,name: String?, pwd: String?) {
+        Snackbar.make(mRootView,if(res)getString(R.string.save_db_ok) else getString(R.string.save_db_error), Snackbar.LENGTH_SHORT).show()
+    }
 
     private fun getProfile():List<IProfile<*>> {
         val list = ArrayList<IProfile<*>>()
@@ -200,7 +211,15 @@ class HomeActivity:BaseActivity() {
         startActivity(Intent(this,ServerSetActivity::class.java))
     }
 
-    private fun funBind(){}
+    private fun funBind(){
+        //todo 绑定指纹
+        if (!Util.isNewApi || !FingerprintUiHelper.isFingerAvailable(this)) {
+            DialogUtils.postMsgDialog(this, getString(R.string.login_other_fingerprint), getString(R.string.login_other_fingerprint_no_support), null)
+            return
+        }
+        val fingerFragment = FingerPrintSaveDialog(this,getString(R.string.finger_save_title),getString(R.string.fingerprint_save_description))
+        fingerFragment.show(supportFragmentManager, "fingerSave")
+    }
 
     private fun funPush(){}
 

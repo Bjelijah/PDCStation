@@ -13,17 +13,24 @@ import butterknife.OnClick
 import com.howell.action.ConfigAction
 import com.howell.action.FingerprintUiHelper
 import com.howell.activity.view.FingerPrintBaseDialog
+import com.howell.activity.view.FingerPrintLoadDialog
+import com.howell.bean.UserDbBean
+import com.howell.db.UserDao
 import com.howell.modules.login.ILoginContract
 import com.howell.modules.login.bean.Type
 import com.howell.modules.login.presenter.LoginHttpPresenter
 import com.howell.pdcstation.R
 import com.howell.utils.DialogUtils
 import com.howell.utils.Util
+import com.howellsdk.utils.RxUtil
+import java.util.*
 
 /**
  * Created by Administrator on 2017/11/28.
  */
-class LoginActivity :BaseActivity(),ILoginContract.IVew {
+class LoginActivity :BaseActivity(),ILoginContract.IVew, FingerPrintBaseDialog.OnFignerPrintIDListener {
+
+
 
     @BindView(R.id.login_et_username)     lateinit var mUserNameView:AutoCompleteTextView
     @BindView(R.id.login_et_password)     lateinit var mPasswordView:EditText
@@ -96,6 +103,7 @@ class LoginActivity :BaseActivity(),ILoginContract.IVew {
     override fun findView() {
         setContentView(R.layout.activity_login)
         ButterKnife.bind(this@LoginActivity)
+
     }
 
     override fun onLogoutResult(type: Type) {
@@ -103,6 +111,13 @@ class LoginActivity :BaseActivity(),ILoginContract.IVew {
 
     override fun initView() {
         bindPresenter()
+    }
+
+
+
+    override fun onFignerPrint(res:Boolean,id:Int?,name: String?, pwd: String?) {
+        mPresenter?.init(this)
+        mPresenter?.login(name,pwd)
     }
 
     override fun initData() {
@@ -151,7 +166,7 @@ class LoginActivity :BaseActivity(),ILoginContract.IVew {
             DialogUtils.postMsgDialog(this, getString(R.string.login_other_fingerprint), getString(R.string.login_other_fingerprint_no_support), null)
             return
         }
-        val fingerFragment = FingerPrintBaseDialog()
+        val fingerFragment = FingerPrintLoadDialog(this,getString(R.string.finger_title),getString(R.string.fingerprint_description))
 //        fingerFragment.setHandler(mHandler)
         fingerFragment.show(supportFragmentManager, "fingerLogin")
     }
