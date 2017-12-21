@@ -27,26 +27,57 @@
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_below="@id/station_title"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
         />
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/station_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/station_msg"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_below="@id/station_iv"
+        android:textSize="15sp"/>
+
+
+
+    <LinearLayout
+        android:layout_below="@id/station_msg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="zzzzzzzzzzzzz"/>
+            android:text="@string/station_choose_station"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15sp"
+           />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/station_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:spinnerMode="dropdown"
+            style="@style/common_spinner"/>
+
+
 
 
 
 
     </LinearLayout>
+
+
+
 
 
     <Button

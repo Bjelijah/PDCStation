@@ -13,6 +13,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         ndk{
             abiFilters 'armeabi-v7a'
+
            // abiFilters 'armeabi','armeabi-v7a'//ndk 16 deprecated armeabi
 //            ldLibs "log" ,"GLESv2" ,"z" ,"dl","gcc"
         }
@@ -57,7 +58,13 @@ android {
     packagingOptions{
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/ASL2.0'
+//        exclude 'lib/armeabi-v7a/libplayer_jni.so'// fixme
+//        exclude 'lib/armeabi-v7a/libhwtrans.so'
+//        exclude 'lib/armeabi-v7a/libhwplay.so'
 
+        pickFirst 'lib/armeabi-v7a/libplayer_jni.so'
+        pickFirst 'lib/armeabi-v7a/libhwtrans.so'
+        pickFirst 'lib/armeabi-v7a/libhwplay.so'
     }
     useLibrary 'org.apache.http.legacy'
 }

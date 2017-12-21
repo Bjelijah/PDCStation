@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    >
+
+    <TextView
+        android:id="@+id/pop_chart_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:00"
+        android:textColor="@color/white_highlight"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/pop_chart_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_highlight"
+        android:text="entry"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/pop_chart_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_highlight"
+        android:text="out"
+        android:textSize="12sp"/>
+
+</LinearLayout>

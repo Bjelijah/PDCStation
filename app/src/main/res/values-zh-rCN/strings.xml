@@ -419,4 +419,6 @@
 
 	<string name="charts_hour_tab">1小时人流量</string>
 	<string name="charts_Day_tab">1天人流量</string>
+	<string name="station_msg">我猜这是您第一次使用吧，选择您要访问的站点然后进入吧</string>
+	<string name="station_choose_station">选择站点</string>
 </resources>

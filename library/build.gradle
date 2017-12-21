@@ -10,11 +10,15 @@ android {
         targetSdkVersion 26
         versionCode 560
         versionName '5.6.0'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        repositories {
+
         }
     }
     productFlavors {
