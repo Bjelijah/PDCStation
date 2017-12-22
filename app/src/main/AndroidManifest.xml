@@ -49,13 +49,10 @@
             android:launchMode="singleTask"
             android:theme="@style/MyappThemePlay"
             />
-        <activity android:name="com.howell.activity.LineChartActivity"
+        <activity android:name="com.howell.activity.ChartActivity"
             android:theme="@style/MyappThemeCharts"
             android:screenOrientation="landscape"
             />
-        <activity android:name="com.howell.activity.LineColumnChartsActivity"
-            android:theme="@style/MyappThemeCharts"/>
-
         <activity android:name="com.howell.activity.ServerSetActivity"
             android:theme="@style/MyAppThemeServerAddress"/>
 

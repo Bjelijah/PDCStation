@@ -11,8 +11,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.howell.activity.LineChartActivity
-import com.howell.activity.LineColumnChartsActivity
+import com.howell.activity.ChartActivity
 import com.howell.adapter.PDCRecyclerViewAdapter
 import com.howell.modules.pdc.IPDCContract
 import com.howell.modules.pdc.bean.PDCDevice
@@ -55,9 +54,9 @@ class PDCFragment : HomeBaseFragment(),IPDCContract.IView {
             override fun onItmeClick(v: View, pos: Int,item:PDCDevice?) {
                 //todo show activity
                 if (item?.onLine == true) {
-                    startActivity(Intent(context!!, LineChartActivity::class.java).putExtra("id", item?.id))
+                    startActivity(Intent(context!!, ChartActivity::class.java).putExtra("id", item?.id))
                 }else{
-                    startActivity(Intent(context!!, LineChartActivity::class.java).putExtra("id", item?.id))
+                    startActivity(Intent(context!!, ChartActivity::class.java).putExtra("id", item?.id))
                     Snackbar.make(view,"设备不在线，无法打开",Snackbar.LENGTH_SHORT).show()
                 }
 

@@ -9,12 +9,13 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import com.howell.activity.fragment.LineChartDayFragment
 import com.howell.activity.fragment.LineChartHourFragment
+import com.howell.activity.fragment.LineColumnChartFragment
 import com.howell.pdcstation.R
 
 /**
  * Created by Administrator on 2017/12/12.
  */
-class LineChartActivity : BaseActivity() {
+class ChartActivity : BaseActivity() {
 
     @BindView(R.id.charts_tab) lateinit var mTab:TabLayout
     @BindView(R.id.charts_vp) lateinit var mVp:ViewPager
@@ -27,7 +28,8 @@ class LineChartActivity : BaseActivity() {
     override fun initView() {
 //        supportFragmentManager.beginTransaction().add(R.id.charts_container, LineChartFragment(intent.getStringExtra("id"))).commit()
         mTab.addTab(mTab.newTab().setText(getString(R.string.charts_hour_tab)))
-        mTab.addTab(mTab.newTab().setText(getString(R.string.charts_Day_tab)))
+        mTab.addTab(mTab.newTab().setText(getString(R.string.charts_day_tab)))
+        mTab.addTab(mTab.newTab().setText(getString(R.string.charts_week_tab)))
         mTab.tabGravity = TabLayout.GRAVITY_FILL
         mVp.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(mTab))
         mTab.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
@@ -49,6 +51,7 @@ class LineChartActivity : BaseActivity() {
         val l:ArrayList<Fragment> = ArrayList()
         l.add(LineChartHourFragment(id))
         l.add(LineChartDayFragment(id))
+        l.add(LineColumnChartFragment(id))
         return l
     }
 

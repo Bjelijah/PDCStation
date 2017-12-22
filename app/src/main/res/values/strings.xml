@@ -474,10 +474,17 @@
     <string name="wheel_dialog_end_time">End Time</string>
 
     <string name="charts_hour_tab">1hour Man</string>
-    <string name="charts_Day_tab">1Day Man</string>
-
+    <string name="charts_day_tab">1Day Man</string>
+    <string name="charts_week_tab">1week Man</string>
     <string name="station_msg">I guess it is first time for you to use PDC Station,choose station and visit it</string>
     <string name="station_choose_station">Choose station</string>
-
-
+    <string name="charts_week_week">Week</string>
+    <string name="charts_week_day">Day</string>
+    <string name="charts_week_monday">Mon</string>
+    <string name="charts_week_tuesday">Tue</string>
+    <string name="charts_week_wednesday">Wes</string>
+    <string name="charts_week_thursday">Tur</string>
+    <string name="charts_week_friday">Fri</string>
+    <string name="charts_week_saturday">Sat</string>
+    <string name="charts_week_sunday">Sun</string>
 </resources>

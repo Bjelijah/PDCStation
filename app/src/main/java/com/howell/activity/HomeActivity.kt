@@ -108,6 +108,9 @@ class HomeActivity:BaseActivity(), FingerPrintBaseDialog.OnFignerPrintIDListener
     }
 
     override fun initData() {
+        
+
+        mAddBtn.visibility = View.GONE
 //        mAddBtn.setImageDrawable(IconicsDrawable(this, GoogleMaterial.Icon.gmd_camera_add).actionBar().color(Color.WHITE))
 
         mAddBtn.setImageDrawable(IconicsDrawable(this, GoogleMaterial.Icon.gmd_camera_party_mode).actionBar().color(Color.WHITE))
