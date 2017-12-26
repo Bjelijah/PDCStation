@@ -55,6 +55,10 @@
             />
         <activity android:name="com.howell.activity.ServerSetActivity"
             android:theme="@style/MyAppThemeServerAddress"/>
+        <activity android:name="com.howell.activity.HistoryActivity"
+            android:theme="@style/MyAppThemeHome.History"
+            />
+
 
     </application>
 

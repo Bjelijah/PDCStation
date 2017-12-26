@@ -3,10 +3,7 @@ package com.howell.modules.pdc.presenter
 import android.util.Log
 import com.howell.modules.pdc.bean.PDCDevice
 import com.howellsdk.api.ApiManager
-import com.howellsdk.net.http.bean.EventRecordedList
-import com.howellsdk.net.http.bean.PDCDeviceList
-import com.howellsdk.net.http.bean.PDCSample
-import com.howellsdk.net.http.bean.PDCSampleList
+import com.howellsdk.net.http.bean.*
 import com.howellsdk.utils.Util
 import io.reactivex.Observable
 import io.reactivex.Observer
@@ -21,9 +18,6 @@ import kotlin.collections.ArrayList
  * Created by Administrator on 2017/12/12.
  */
 class PDCHttpPresenter : PDCBasePresenter() {
-
-
-    var mId:String? = null
 
     override fun queryDevice() {
         ApiManager.getInstance().getHWHttpService(mUrl)
@@ -121,5 +115,114 @@ class PDCHttpPresenter : PDCBasePresenter() {
                 })
     }
 
+    fun queryRecord(id:String,beg:String,end:String){
+        ApiManager.getInstance().hwHttpService.queryPdcEventRecords(
+                ApiManager.HttpHelp.getCookie(ApiManager.HttpHelp.Type.PDC_EVENTS_RECORDS),
+                beg,end,id,"None",null,null)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(object :Observer<EventRecordedList>{
+                    override fun onComplete() {
+                    }
 
+                    override fun onNext(t: EventRecordedList) {
+                        Log.i("123","l=$t")
+                    }
+
+                    override fun onSubscribe(d: Disposable) {
+                        addDisposable(d)
+                    }
+
+                    override fun onError(e: Throwable) {
+                        e.printStackTrace()
+                    }
+                })
+    }
+
+    fun queryState(id:String?){
+        ApiManager.getInstance().hwHttpService.queryPdcDeviceStatus(
+                ApiManager.HttpHelp.getCookie(ApiManager.HttpHelp.Type.PDC_DEVICE_STATUS,id),id)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(object :Observer<PDCDeviceStatus>{
+                    override fun onComplete() {
+                    }
+
+                    override fun onSubscribe(d: Disposable) {
+                        addDisposable(d)
+                    }
+
+                    override fun onError(e: Throwable) {
+                        e.printStackTrace()
+                    }
+
+                    override fun onNext(t: PDCDeviceStatus) {
+                        Log.i("123","t=$t")
+                    }
+
+                })
+    }
+
+    fun queryThreshold(id:String?){
+        ApiManager.getInstance().hwHttpService.queryPdcDeviceThreshold(
+                ApiManager.HttpHelp.getCookie(ApiManager.HttpHelp.Type.PDC_DEVICE_THRESHOLD,id),id)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(object :Observer<PDCThreshold>{
+                    override fun onComplete() {
+                    }
+
+                    override fun onError(e: Throwable) {
+                        e.printStackTrace()
+                    }
+
+                    override fun onSubscribe(d: Disposable) {
+                        addDisposable(d)
+                    }
+
+                    override fun onNext(t: PDCThreshold) {
+                        Log.i("123","t=$t")
+                    }
+                })
+    }
+
+
+    fun querySchedule(id:String?){
+        ApiManager.getInstance().hwHttpService.queryPdcDeviceSchedule(
+                ApiManager.HttpHelp.getCookie(ApiManager.HttpHelp.Type.PDC_DEVICE_SCHEDULE,id),id)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(object :Observer<WeeklySchedule>{
+                    override fun onError(e: Throwable) {
+                        e.printStackTrace()
+                    }
+
+                    override fun onComplete() {
+
+                    }
+
+                    override fun onNext(t: WeeklySchedule) {
+                        Log.i("123","t=$t")
+                    }
+
+                    override fun onSubscribe(d: Disposable) {
+                        addDisposable(d)
+                    }
+                })
+    }
+
+
+    override fun queryTest(id: String?) {
+        val dateNow  = Date()
+        val c = Calendar.getInstance()
+        c.time = dateNow
+        c.add(Calendar.DAY_OF_MONTH,-5)
+        val dateBefore = c.time
+        val end = Util.Date2ISODate(dateNow)
+        val beg = Util.Date2ISODate(dateBefore)
+
+//        queryState(id)
+//        queryThreshold(id)
+        querySchedule(id)
+    }
 }

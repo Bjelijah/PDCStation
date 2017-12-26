@@ -54,13 +54,14 @@ class PDCExpandableListAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>
                 holder?.ll?.setOnClickListener({ v->
                     if (item?.device?.onLine == false){
                         mLinstener?.onItemOffline(v)
-                        return@setOnClickListener
+//                        return@setOnClickListener//fixme return for test
                     }
 
 
                     if (item.showChild == true){
                         //删掉元素@drawable/abc_ic_arrow_drop_right_black_24dp
                         holdHead.iv.setImageResource(R.drawable.ic_expand_more_white_online_24px)
+
                         val pos = mList?.indexOf(item)?:0
                         var count = 0
                         item.showChild = false
@@ -69,7 +70,6 @@ class PDCExpandableListAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>
                             count ++
                         }
                         notifyItemRangeRemoved(pos+1,count)
-
                     } else {
                         holdHead.iv.setImageResource(R.drawable.ic_expand_less_white_online_24px)
                         val pos = mList?.indexOf(item)?:0
@@ -77,6 +77,7 @@ class PDCExpandableListAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>
                         mList?.add(pos +1, PDCItem(item.device,mContext?.getString(R.string.pdc_man_charts), CHILD).setFlag(0))
                         mList?.add(pos +2, PDCItem(item.device,mContext?.getString(R.string.pdc_man_mark), CHILD).setFlag(1))
                         notifyItemRangeInserted(pos + 1, 2)
+
                     }
                 })
             }
@@ -92,6 +93,8 @@ class PDCExpandableListAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>
             else   ->{}
         }
     }
+
+
 
 
 

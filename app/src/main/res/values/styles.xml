@@ -231,6 +231,9 @@
     </style>
 
 
+    <style name="MyAppThemeHome.History"></style>
+
+
     <style name="MyappThemeVideoList" parent="MaterialDrawerTheme.TranslucentStatus">
         <item name="colorPrimary">@color/home_bk</item>
         <item name="colorPrimaryDark">@color/home_bk_dark</item>
@@ -293,7 +296,6 @@
     </style>
 
     <style name="MyAppThemeAdd.Scan">
-
     </style>
 
 

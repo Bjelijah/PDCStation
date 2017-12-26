@@ -13,6 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.howell.activity.ChartActivity
+import com.howell.activity.HistoryActivity
 import com.howell.adapter.PDCExpandableListAdapter
 import com.howell.adapter.PDCRecyclerViewAdapter
 import com.howell.modules.pdc.IPDCContract
@@ -86,6 +87,9 @@ class PDCFragment : HomeBaseFragment(),IPDCContract.IView {
                         },600)
                     }
                     1->{
+                        v.postDelayed({
+                            startActivity(Intent(context!!,HistoryActivity::class.java).putExtra("id",item?.id))
+                        },600)
                     }
                 }
             }

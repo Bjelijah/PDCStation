@@ -101,7 +101,7 @@
     <color name="item_camera_detele">#ff5252</color>
     <color name="item_camera_video">#51111111</color>
     <color name="item_camera_detele_bk">#656565</color>
-    <color name="item_pdc_bk">#555555</color>
+    <color name="item_pdc_bk">#383838</color>
 
     <color name="server_bk">#13a9f4</color>
     <color name="server_bk_dark">#2196f3</color>
