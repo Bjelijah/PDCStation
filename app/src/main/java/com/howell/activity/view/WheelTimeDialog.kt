@@ -89,12 +89,12 @@ class WheelTimeDialog() : DialogFragment() {
 
     private fun getViewList():ArrayList<Fragment>{
         val l:ArrayList<Fragment> = ArrayList()
-        mBegWheel = WheelTimeFragment(object : WheelTimeFragment.OnTimeChangedLinstener{
+        mBegWheel = WheelTimeFragment().setChangedLinstener(object : WheelTimeFragment.OnTimeChangedLinstener{
             override fun onTimeChanged(s: String) {
                 mTvBeg.text = getString(R.string.wheel_dialog_beg_time)+": $s"
             }
         })
-        mEndWheel = WheelTimeFragment(object :WheelTimeFragment.OnTimeChangedLinstener{
+        mEndWheel = WheelTimeFragment().setChangedLinstener(object :WheelTimeFragment.OnTimeChangedLinstener{
             override fun onTimeChanged(s: String) {
                 mTvEnd.text = getString(R.string.wheel_dialog_end_time)+": $s"
             }

@@ -29,10 +29,11 @@ class WheelTimeFragment() : Fragment() {
     var mListener : OnTimeChangedLinstener? = null
 
 
-    @SuppressLint("ValidFragment")
-    constructor(o:OnTimeChangedLinstener):this(){
+    fun setChangedLinstener(o:OnTimeChangedLinstener):WheelTimeFragment{
         mListener = o
+        return this
     }
+
 
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -50,7 +51,7 @@ class WheelTimeFragment() : Fragment() {
         mHour   = calendar.get(Calendar.HOUR_OF_DAY)
         mMin = calendar.get(Calendar.MINUTE)
         mSec = calendar.get(Calendar.SECOND)
-        mWheel?.initDateTimePicker(mYear, mMonth -1 , mDay,mHour,mMin,mSec,{v,flag->
+        mWheel?.initDateTimePicker(mYear, mMonth -1 , mDay,mHour,mMin,mSec, {v,flag->
             when(flag){
                 WheelDate.YEAR    ->{mYear=v;setTime()}
                 WheelDate.MONTH   ->{mMonth=v;setTime()}
@@ -60,7 +61,8 @@ class WheelTimeFragment() : Fragment() {
                 WheelDate.SEC     ->{mSec=v;setTime()}
             }
             mListener?.onTimeChanged(mTimeStr)
-        })
+        }
+        )
         setTime()
         mListener?.onTimeChanged(mTimeStr)
         return mWheel?.view

@@ -2,19 +2,16 @@ package com.howell.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.res.ColorStateList
-import android.support.v7.widget.AppCompatRadioButton
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.howell.modules.pdc.bean.PDCDevice
 import com.howell.pdcstation.R
-import java.util.*
 import kotlin.collections.ArrayList
 
 /**
@@ -44,23 +41,26 @@ class PDCExpandableListAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>
             HEADER ->{
                 val holdHead = holder as ViewHolderHead
                 holdHead?.tv?.text = item?.device?.name
-                holdHead?.rb?.isChecked = true
-                var c:ColorStateList = if (item?.device?.onLine == true){
-                    ColorStateList.valueOf(mContext?.getColor(R.color.btn_green_color)!!)
+                if (item?.device?.onLine == true){
+                    holdHead?.rb?.setImageResource(R.drawable.ic_cloud_black_24dp)
+                    holdHead?.tv?.setTextColor(mContext!!.getColor(R.color.pdc_white_online))
+                    holdHead?.iv?.setImageResource(R.drawable.ic_expand_more_white_online_24px)
                 }else{
-                    ColorStateList.valueOf(mContext?.getColor(R.color.accent)!!)
+                    holdHead?.rb?.setImageResource(R.drawable.ic_cloud_off_black_24dp)
+                    holdHead?.tv?.setTextColor(mContext!!.getColor(R.color.pdc_white_offline))
+                    holdHead?.iv?.setImageResource(R.drawable.ic_expand_more_white_offline_24px)
                 }
-                holdHead?.rb?.buttonTintList = c
-                holder?.ll?.setOnClickListener({
+
+                holder?.ll?.setOnClickListener({ v->
                     if (item?.device?.onLine == false){
-                        mLinstener?.onItemOffline()
+                        mLinstener?.onItemOffline(v)
                         return@setOnClickListener
                     }
 
 
                     if (item.showChild == true){
                         //删掉元素@drawable/abc_ic_arrow_drop_right_black_24dp
-                        holdHead.iv.setImageResource(R.drawable.abc_ic_arrow_drop_right_black_24dp)
+                        holdHead.iv.setImageResource(R.drawable.ic_expand_more_white_online_24px)
                         val pos = mList?.indexOf(item)?:0
                         var count = 0
                         item.showChild = false
@@ -71,7 +71,7 @@ class PDCExpandableListAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>
                         notifyItemRangeRemoved(pos+1,count)
 
                     } else {
-                        holdHead.iv.setImageResource(R.mipmap.ic_expand_less_white_24dp)
+                        holdHead.iv.setImageResource(R.drawable.ic_expand_less_white_online_24px)
                         val pos = mList?.indexOf(item)?:0
                         item.showChild = true
                         mList?.add(pos +1, PDCItem(item.device,mContext?.getString(R.string.pdc_man_charts), CHILD).setFlag(0))
@@ -83,9 +83,11 @@ class PDCExpandableListAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>
             CHILD  ->{
                 val holdItem = holder as ViewHolderItem
                 holdItem.itemTv.text = item.text
-                holdItem.itemTv.setOnClickListener {
-                    mLinstener?.onItemClick(item?.device,item.childFlag)
+                holdItem.itemll.setOnClickListener { v->
+                    mLinstener?.onItemClick(v,item?.device,item.childFlag)
                 }
+                holdItem.itemIv.setImageResource(if (item.childFlag==0) R.drawable.ic_multiline_chart_white_24px else
+                    R.drawable.ic_equalizer_white_24px)
             }
             else   ->{}
         }
@@ -119,13 +121,13 @@ class PDCExpandableListAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>
 
 
     interface OnItemClick{
-        fun onItemClick(item:PDCDevice?,flag:Int?)
-        fun onItemOffline()
+        fun onItemClick(v:View,item:PDCDevice?,flag:Int?)
+        fun onItemOffline(v:View)
     }
 
 
     inner class ViewHolderHead(v: View) : RecyclerView.ViewHolder(v){
-        val rb = v.findViewById<AppCompatRadioButton>(R.id.item_pdc_head_online)!!
+        val rb = v.findViewById<ImageView>(R.id.item_pdc_head_online)!!
         val ll = v.findViewById<RelativeLayout>(R.id.item_pdc_head_ll)!!
         val tv = v.findViewById<TextView>(R.id.item_pdc_head_tv)!!
         val iv = v.findViewById<ImageView>(R.id.item_pdc_head_iv)!!
@@ -133,6 +135,8 @@ class PDCExpandableListAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     inner class ViewHolderItem(v:View) : RecyclerView.ViewHolder(v){
         val itemTv = v.findViewById<TextView>(R.id.item_pdc_item_tv)!!
+        val itemll = v.findViewById<LinearLayout>(R.id.item_pdc_item_ll)!!
+        var itemIv = v.findViewById<ImageView>(R.id.item_pdc_item_iv)!!
     }
 
 

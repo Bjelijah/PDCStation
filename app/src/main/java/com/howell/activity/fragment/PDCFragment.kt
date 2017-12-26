@@ -78,19 +78,19 @@ class PDCFragment : HomeBaseFragment(),IPDCContract.IView {
         })
 
         mPDCAdapter = PDCExpandableListAdapter(object :PDCExpandableListAdapter.OnItemClick{
-            override fun onItemClick(item: PDCDevice?, flag: Int?) {
+            override fun onItemClick(v:View,item: PDCDevice?, flag: Int?) {
                 when (flag){
                     0->{
-                        Log.i("123","${item?.name}   on flag = 0")
-//                        startActivity(Intent(context!!, ChartActivity::class.java).putExtra("id", item?.id))
+                        v.postDelayed({
+                            startActivity(Intent(context!!, ChartActivity::class.java).putExtra("id", item?.id))
+                        },600)
                     }
                     1->{
-                        Log.i("123","${item?.name}  on flag = 1")
                     }
                 }
             }
 
-            override fun onItemOffline() {
+            override fun onItemOffline(v:View) {
                 Snackbar.make(view,"设备不在线，无法打开",Snackbar.LENGTH_SHORT).show()
             }
         })

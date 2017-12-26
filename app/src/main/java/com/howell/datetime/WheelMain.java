@@ -391,8 +391,7 @@ public class WheelMain {
 		return calendar.getTime();
 	}
 
-	 interface OnMyWheelChangeListener{
-
+	 public interface OnMyWheelChangeListener{
 		void onChange(int v,WheelDate flag);
 	}
 }
