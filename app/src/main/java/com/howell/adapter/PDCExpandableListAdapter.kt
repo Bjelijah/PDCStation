@@ -152,6 +152,7 @@ class PDCExpandableListAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>
         fun setFlag(flag:Int):PDCItem{
             childFlag = flag
             return this
+
         }
 
     }
