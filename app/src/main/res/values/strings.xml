@@ -487,4 +487,7 @@
     <string name="charts_week_friday">Fri</string>
     <string name="charts_week_saturday">Sat</string>
     <string name="charts_week_sunday">Sun</string>
+
+    <string name="pdc_man_charts">Pdc charts</string>
+    <string name="pdc_man_mark">Pdc mark</string>
 </resources>

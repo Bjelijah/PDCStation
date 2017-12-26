@@ -22,6 +22,7 @@ import butterknife.ButterKnife
 import com.bumptech.glide.Glide
 import com.howell.action.FingerprintUiHelper
 import com.howell.activity.fragment.DeviceFragment
+import com.howell.activity.fragment.HistoryFragment
 import com.howell.activity.fragment.HomeBaseFragment
 import com.howell.activity.fragment.PDCFragment
 import com.howell.activity.view.FingerPrintBaseDialog
@@ -186,6 +187,7 @@ class HomeActivity:BaseActivity(), FingerPrintBaseDialog.OnFignerPrintIDListener
         mFragments = ArrayList()
         mFragments.add(DeviceFragment())
         mFragments.add(PDCFragment())
+//        mFragments.add(HistoryFragment())
         mViewPage.offscreenPageLimit = 3
         mViewPage.adapter = MyFragmentPagerAdatper(supportFragmentManager,mFragments)
         mViewPage.addOnPageChangeListener(object :ViewPager.OnPageChangeListener{
@@ -267,7 +269,7 @@ class HomeActivity:BaseActivity(), FingerPrintBaseDialog.OnFignerPrintIDListener
             mTitle = ArrayList()
             mTitle.add(getString(R.string.home_fragment_devices))
             mTitle.add(getString(R.string.home_fragment_pdc))
-
+//            mTitle.add("history")
         }
         override fun getItem(position: Int): Fragment = mList[position]
 

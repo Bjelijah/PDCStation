@@ -7,7 +7,6 @@ import android.os.Build
 import android.support.annotation.RequiresApi
 import android.support.v7.widget.AppCompatRadioButton
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,7 +24,7 @@ import com.howell.pdcstation.R
 class PDCRecyclerViewAdapter(o:OnItemClick) : RecyclerView.Adapter<PDCRecyclerViewAdapter.ViewHolder>() {
 
 
-    var mPDCList:ArrayList<PDCDevice>?  =null
+    var mPDCList:ArrayList<PDCDevice>?  = null
     var mContext :Context?              = null
     private val mClickListener          = o
 

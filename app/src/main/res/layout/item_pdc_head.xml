@@ -4,10 +4,10 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
 
-    android:paddingBottom="5dp">
+    android:paddingTop="5dp">
 
     <RelativeLayout
-        android:id="@+id/item_pdc_ll"
+        android:id="@+id/item_pdc_head_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -21,7 +21,7 @@
 
 
         <android.support.v7.widget.AppCompatRadioButton
-            android:id="@+id/item_pdc_online"
+            android:id="@+id/item_pdc_head_online"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -30,11 +30,11 @@
 
 
         <TextView
-            android:id="@+id/item_pdc_tv"
+            android:id="@+id/item_pdc_head_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test"
-            android:layout_toRightOf="@id/item_pdc_online"
+            android:layout_toRightOf="@id/item_pdc_head_online"
 
             android:layout_centerVertical="true"
 
@@ -42,7 +42,7 @@
 
 
         <ImageView
-            android:id="@+id/item_pdc_iv"
+            android:id="@+id/item_pdc_head_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

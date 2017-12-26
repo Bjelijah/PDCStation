@@ -3,6 +3,7 @@ package com.howell.modules.pdc.presenter
 import android.util.Log
 import com.howell.modules.pdc.bean.PDCDevice
 import com.howellsdk.api.ApiManager
+import com.howellsdk.net.http.bean.EventRecordedList
 import com.howellsdk.net.http.bean.PDCDeviceList
 import com.howellsdk.net.http.bean.PDCSample
 import com.howellsdk.net.http.bean.PDCSampleList
@@ -89,5 +90,36 @@ class PDCHttpPresenter : PDCBasePresenter() {
                     override fun onComplete() {}
                 })
     }
+
+    override fun queryHistory(id:String,beg:String,end:String,eventType:String) {
+        ApiManager.getInstance().hwHttpService.queryPdcEventRecords(
+                ApiManager.HttpHelp.getCookie(ApiManager.HttpHelp.Type.PDC_EVENTS_RECORDS),
+                beg,
+                end,
+                id,
+                eventType,
+                null,
+                null
+        )
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(object :Observer<EventRecordedList>{
+                    override fun onSubscribe(d: Disposable) {
+                        addDisposable(d)
+                    }
+
+                    override fun onNext(t: EventRecordedList) {
+                        Log.i("123","queryHistory   t=$t")
+                    }
+
+                    override fun onError(e: Throwable) {
+                        e.printStackTrace()
+                    }
+
+                    override fun onComplete() {
+                    }
+                })
+    }
+
 
 }

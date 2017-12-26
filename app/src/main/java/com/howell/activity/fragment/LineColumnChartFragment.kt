@@ -41,10 +41,6 @@ import kotlin.collections.ArrayList
 class LineColumnChartFragment() : Fragment(), IPDCContract.IView {
 
     companion object {
-        private val HOUR_OF_DAY = arrayOf("0:00", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00")
-
-        private val MIN_OF_HOUR = arrayOf(":00", ":05", ":10", ":15", ":20", ":25", ":30", ":35", ":40", ":45", ":50", ":55")
-
         val DATA_TYPE = 2 //0进入 1出去
         val DATA_WEEK_LEN  = 7 // 7 day
         val DATA_DAY_LEN = 24 //24 hour
@@ -73,8 +69,6 @@ class LineColumnChartFragment() : Fragment(), IPDCContract.IView {
         mChartBottom = v.findViewById(R.id.lcc_column_chart)
         init()
         bindPresenter()
-
-//        generateColumnData()
         getData()
         return v
     }
@@ -256,9 +250,6 @@ class LineColumnChartFragment() : Fragment(), IPDCContract.IView {
     }
 
     private fun generateColumnData() {
-//        getDataDay()
-//        val numSubcolumns = 2
-//        val numColumns = 24//24小时
 
         val axisValues = ArrayList<AxisValue>()
         val columns = ArrayList<Column>()
@@ -293,11 +284,6 @@ class LineColumnChartFragment() : Fragment(), IPDCContract.IView {
                 val end = Util.Date2ISODate(c.time)
                 mPresenter?.querySamples(mID!!,"Hour",beg,end)
 
-
-//                val t = String( weekX!![columnIndex].value!!.labelAsChars)
-
-
-//                generateLineData(columnIndex, false)
             }
 
             override fun onValueDeselected() {
@@ -309,7 +295,7 @@ class LineColumnChartFragment() : Fragment(), IPDCContract.IView {
     }
 
 
-    private fun generateLineData(top:Int,isInit: Boolean) {//当前小时数据
+    private fun generateLineData(top:Int,isInit: Boolean) {//当前一天的数据
         val flag = if (isInit) 0 else 1
         mChartTop!!.cancelDataAnimation()
         val lineIn = lineData!!.lines[0]
@@ -329,13 +315,9 @@ class LineColumnChartFragment() : Fragment(), IPDCContract.IView {
             val valueOut = valuesOut[i]
             valueOut.setTarget(valueOut.x, (mDataDay!![1][i] * flag).toFloat())
             valueOut.setLabel(if (isInit) "" else "出去：" + mDataDay!![1][i])
-
-//            axisValues[i] = dayX!![i].value
-
             val axisValue = axisValues[i]
             axisValue.setLabel(String.format("%02d:00", i))
         }
-        //        mDataHour[1][i]*flag
         val v = Viewport( mChartTop?.maximumViewport)
         v.bottom = 0f
         v.top = if (isInit) mChartTop?.maximumViewport?.top?:100f else top.times(1.25f)!!
@@ -347,27 +329,6 @@ class LineColumnChartFragment() : Fragment(), IPDCContract.IView {
 
         mChartTop!!.startDataAnimation(300)
     }
-
-
-    private fun getDataDay() {
-        for (i in 0..1) {
-            for (j in 0..23) {
-                mDataDay!![i][j] = (Math.random() * 100).toInt()
-            }
-        }
-    }
-
-    private fun getDataHour(hour: Int) {
-        for (i in 0..1) {
-            for (j in 0..11) {
-                mDataDay!![i][j] = (Math.random() * 100).toInt()
-            }
-        }
-
-
-    }
-
-
 
     inner class DataBeanX{
         constructor(d:Date?,v:AxisValue?){

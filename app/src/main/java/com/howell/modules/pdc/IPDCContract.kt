@@ -19,5 +19,6 @@ interface IPDCContract {
         fun init(c:Context)
         fun queryDevice()
         fun querySamples(id:String,unit:String,beg:String,end:String)
+        fun queryHistory(id:String,beg:String,end:String,eventType:String)
     }
 }
