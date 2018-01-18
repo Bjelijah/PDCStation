@@ -77,7 +77,6 @@ class PDCExpandableListAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>
                         mList?.add(pos +1, PDCItem(item.device,mContext?.getString(R.string.pdc_man_charts), CHILD).setFlag(0))
                         mList?.add(pos +2, PDCItem(item.device,mContext?.getString(R.string.pdc_man_mark), CHILD).setFlag(1))
                         notifyItemRangeInserted(pos + 1, 2)
-
                     }
                 })
             }
